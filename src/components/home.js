@@ -16,7 +16,7 @@ export default function Home() {
                         <div id="process" className="heroButton"><em>See my process</em></div>
                     </div>
                 </div>
-                <div id="heroBrief">
+                <div id="heroBrief" data-aos="fade-left">
                     <div id="leftBrief">
                         <h3>Freelance web designer</h3>
                         <p>My name is Tristan, I'm a Computer Science student and freelance developer
@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id="homeWorkSection" className="container">
+            <section id="homeWorkSection" className="container" data-aos="fade-down">
                 <h2>Recent work</h2>
                 <div className="strike"></div>
                 <div id="homeWorkExamples">
@@ -45,7 +45,7 @@ export default function Home() {
                     <div className="workExample">Work 3</div>
                 </div>
             </section>
-            <div id="homeAbout" className="container">
+            <div id="homeAbout" className="container" data-aos="fade-left">
                 <div id="homeAboutContent">
                     <img id="plansImg" src={plans} />
                     <div id="contentText">
@@ -60,7 +60,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <section id="homeProcessSection">
+            <section id="homeProcessSection" data-aos="zoom-in">
                 <div className="container">
                     <h2>"Digital design is like painting, except the paint never dries."</h2>
                     <div className="strike"></div>
@@ -72,7 +72,7 @@ export default function Home() {
                     </ol>
                 </div>
             </section>
-            <section id="homeContactSection" className="wave wave-top">
+            <section id="homeContactSection" className="wave wave-top" data-aos="fade-up">
                     <div className="row">
                         <div className="col l6 s12">
                             <h1 id="homeContactTitle">Let's get it on!</h1>

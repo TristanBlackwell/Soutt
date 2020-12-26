@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import classnames from "classnames";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
 
@@ -25,15 +26,17 @@ export default function Navbar() {
         <div className={classnames("navbar", {"navbar--hidden": !visible})}>
             <div className="logo">Logo</div>
             <div className="navigation">
-            <a href="#home" className="active middle">Home</a>
-            <a href="#work" className="middle">Work</a>
-            <a href="#services" className="middle">Services</a>
-            <a href="#about" className="middle">About</a>
-            <a href="Blog" className="middle">Blog</a>
+                <Link to="/" className="active middle">Home</Link>
+                <Link to="/work" className="middle">Work</Link>
+                <Link to="/services" className="middle">Services</Link>
+                <Link to="/about" className="middle">About</Link>
+                <Link to="/blog" className="middle">Blog</Link>
             </div>
             <div className="contact">
-                <i className="fas fa-phone-alt"></i>
-                <p>07567 375491</p>
+                <a href="tel: 07567 375491">
+                    <i className="fas fa-phone-alt"></i>
+                    <p>07567 375491</p>
+                </a>
             </div>
         </div>
     )
