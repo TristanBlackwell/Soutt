@@ -1,9 +1,28 @@
-
+import { useState, useEffect } from "react";
+import classnames from "classnames";
 
 export default function Navbar() {
 
+    const [prevScrollPos, setprevScrollPos] = useState(window.pageYOffset);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => { window.removeEventListener("scroll", handleScroll) }
+    })
+
+    function handleScroll()  {
+        const currentScrollPos = window.pageYOffset;
+        const isVisible = prevScrollPos > currentScrollPos;
+        
+        setprevScrollPos(currentScrollPos);
+        setVisible(isVisible);
+    }
+
     return (
-        <div className="navbar">
+        <div className={classnames("navbar", {"navbar--hidden": !visible})}>
             <div className="logo">Logo</div>
             <div className="navigation">
             <a href="#home" className="active middle">Home</a>

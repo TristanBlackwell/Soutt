@@ -5,14 +5,26 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.strike {
+  border-bottom: 5px solid #36b6cc;
+  border-radius: 5em;
+  width: 4em;
+}
+
 .navbar {
   position: fixed;
+  top: 0;
   height: 10vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
   color: white;
+  transition: top 0.3s;
+}
+
+.navbar--hidden {
+  top: -10vh;
 }
 
 .navigation a {
@@ -53,11 +65,11 @@ body {
   color: black;
   font-weight: 600;
   letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
 }
 
 .contact:hover {
   transform: translateX(-1em);
-  transition: all 0.3s ease-in-out;
 }
 
 .contact i {
@@ -66,22 +78,38 @@ body {
 
 #heroSection {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
     url("./images/deer.jpg");
-  height: 100vh;
-  background-position: 0 50%;
+  height: 145vh;
+  background-position: 0 27%;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
 }
 
 #heroContent {
   width: 40%;
+  margin-top: 10vh;
+  margin-bottom: 40vh;
   margin-left: 10vw;
 }
 
 #heroContent h1 {
   margin: 0;
   font-family: "Lato", sans-serif;
+  animation: enlargeText 3s 1;
+}
+
+@keyframes enlargeText {
+  0% {
+    font-size: 0;
+  }
+
+  100% {
+    font-size: 4.2rem;
+  }
 }
 
 #heroContent p {
@@ -100,13 +128,14 @@ body {
 }
 
 .heroButton {
+  display: inline-block;
   padding: 0.5em 1.5em;
   border-radius: 2em;
+  transition: all 0.3s ease-in-out;
 }
 
 .heroButton:hover {
   transform: translateY(-0.25em);
-  transition: all 0.5s ease-in-out;
 }
 
 #touch {
@@ -117,8 +146,288 @@ body {
 }
 
 #process {
-  border: 1px solid white;
+  border: 3px solid white;
 }
 
-@media only screen and (min-width: 800px) {
+#heroBrief {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 10vw;
+}
+
+#leftBrief {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+#leftBrief h3 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+#leftBrief p {
+  font-size: 1.25em;
+}
+
+#leftBrief p a {
+  color: tomato;
+  text-decoration: underline;
+}
+
+#rightBrief {
+  width: 20%;
+  margin-left: 15vw;
+}
+
+#rightBrief h5 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+#rightBrief p {
+  font-size: 1.5em;
+}
+
+#rightBrief a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+#rightBrief a:hover {
+  color: tomato;
+}
+
+#homeWorkSection {
+  padding-top: 5vh;
+  margin-bottom: 15vh;
+}
+
+#homeWorkSection h2 {
+  font-family: "Lato", sans-serif;
+  color: tomato;
+}
+
+#homeWorkExamples {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  margin-top: 5vh;
+}
+
+.workExample {
+  display: flex;
+  border: 1px solid red;
+}
+
+#homeAbout {
+  padding-bottom: 15vh;
+}
+
+#homeAboutContent {
+  position: relative;
+  margin-left: 5vw;
+}
+
+#homeAboutContent img {
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#plansImg {
+  width: 45vw;
+  height: 45vh;
+}
+
+#contentText {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  width: 50%;
+}
+
+#contentText h3 {
+  font-family: "Lato", sans-serif;
+  color: tomato;
+}
+
+#contentText p {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  font-size: 1.25em;
+  color: grey;
+}
+
+#homeAboutButton {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border: 2px solid tomato;
+  border-color: tomato;
+  border-radius: 2em;
+  color: tomato;
+  font-size: 1.25em;
+  transition: all 0.3s ease-in-out;
+}
+
+#homeAboutButton:hover {
+  transform: translateX(1em);
+}
+
+#homeProcessSection {
+  padding-top: 5vh;
+  padding-bottom: 7vh;
+  background-color: #f5f5f5;
+}
+
+#homeProcessSection .container h2 {
+  width: 60%;
+  color: tomato;
+  font-family: "Lato", sans-serif;
+}
+
+#processList {
+  margin-top: 2.5em;
+  margin-bottom: 0;
+}
+
+.process {
+  width: 65%;
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
+  color: tomato;
+  border-bottom: 2px solid #36b6cc;
+}
+
+#homeContactSection {
+  padding-top: 5em;
+  padding-bottom: 3em;
+  background: rgb(78, 47, 57);
+  background: linear-gradient(
+    90deg,
+    rgba(78, 47, 57, 1) 0%,
+    rgba(64, 63, 72, 1) 100%
+  );
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.wave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wave::before,
+.wave::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat-x;
+}
+.wave::before {
+  height: 10px;
+  background-size: 20px 20px;
+  background-image: radial-gradient(
+    circle at 10px -5px,
+    transparent 12px,
+    white 13px
+  );
+}
+.wave::after {
+  height: 15px;
+  background-size: 40px 20px;
+  background-image: radial-gradient(
+    circle at 10px 15px,
+    white 12px,
+    transparent 13px
+  );
+}
+
+.wave-top::before,
+.wave-top::after {
+  bottom: auto;
+  top: 0;
+}
+
+.wave-top::before {
+  background-image: radial-gradient(
+    circle at 10px 15px,
+    transparent 12px,
+    white 13px
+  );
+}
+.wave-top::after {
+  background-image: radial-gradient(
+    circle at 10px 0,
+    white 12px,
+    transparent 13px
+  );
+}
+
+#homeContactTitle {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+#homeContactInfo {
+  color: white;
+}
+
+#homeContactInfo h4 {
+  margin: 0;
+  font-family: "Lato";
+  letter-spacing: 1px;
+}
+
+#homeContactInfo p {
+  width: 80%;
+}
+
+#homeContactButton {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 2em;
+  padding: 0.5em;
+  border-radius: 2em;
+  background-color: white;
+  font-size: 1.25em;
+  color: tomato;
+  transition: all 0.3s ease-in-out;
+}
+
+#homeContactButton:hover {
+  transform: translateX(1em);
+}
+
+footer {
+  background: rgb(78, 47, 57);
+  background: linear-gradient(
+    90deg,
+    rgba(78, 47, 57, 1) 0%,
+    rgba(64, 63, 72, 1) 100%
+  );
+}
+
+.footerTitle {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+}
+
+#footerArea p {
+  width: 75%;
+  font-size: 1.1em;
+}
+
+#footerServices ul li {
+  padding-top: 0.5em;
+  font-size: 1.1em;
+}
+
+#footerContact p {
+  font-size: 1.1em;
 }
