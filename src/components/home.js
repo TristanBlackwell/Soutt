@@ -1,7 +1,6 @@
-
 import plans from "../images/plans.jpg";
 
-export default function Home() {
+const Home = (props) => {
 
     return (
         <div id="homePage">
@@ -40,14 +39,21 @@ export default function Home() {
                 <h2>Recent work</h2>
                 <div className="strike"></div>
                 <div id="homeWorkExamples">
-                    <div className="workExample">Work 1</div>
-                    <div className="workExample">Work 2</div>
-                    <div className="workExample">Work 3</div>
+                    {props.examples.map(example => {
+                        return (
+                            <div className="workExample" key={example.name}>
+                                <img  className="exampleThumbnail" src={example.thumbnail.url} alt="logo" />
+                                <h5 className="exampleName">{example.name}</h5>
+                                <p className="exampleTag">{example.tagline}</p>
+                                <a className="exampleLink" href="#thiswork">View project</a>
+                            </div>
+                        )
+                    })}
                 </div>
             </section>
             <div id="homeAbout" className="container" data-aos="fade-left">
                 <div id="homeAboutContent">
-                    <img id="plansImg" src={plans} />
+                    <img id="plansImg" src={plans} alt="wireframe" />
                     <div id="contentText">
                         <h3>About Tristan</h3>
                         <div className="strike"></div>
@@ -72,59 +78,8 @@ export default function Home() {
                     </ol>
                 </div>
             </section>
-            <section id="homeContactSection" className="wave wave-top" data-aos="fade-up">
-                    <div className="row">
-                        <div className="col l6 s12">
-                            <h1 id="homeContactTitle">Let's get it on!</h1>
-                        </div>
-                        <div className="col l6 s12" id="homeContactInfo">
-                            <h4>Interested in working together?</h4>
-                            <p>If you've got all the way to this point why not send an email?
-                                I'm taking on projects right now so would love to hear some ideas
-                                and get creating!
-                            </p>
-                            <div id="homeContactButton">Get in touch</div>
-                        </div>
-                    </div>
-            </section>
-            <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-                <div className="col l4 s12" id="footerArea">
-                    <h5 className="footerTitle">
-                        Areas
-                    </h5>
-                    <p>Living in Oxford, I service the city and surrounding areas.
-                        I am also open to remote work so if this is applicable I would be happy to discuss.
-                    </p>
-                </div>
-                <div className="col l4 s12" id="footerServices">
-                    <h5 className="footerTitle">
-                        Services
-                    </h5>
-                    <ul>
-                        <li>Web Design</li>
-                        <li>Web Development</li>
-                        <li>Servicing Contracts</li>
-                        <li>Online Presence/SEO</li>
-                    </ul>
-                </div>
-                <div className="col l4 s12" id="footerContact">
-                    <h5 className="footerTitle">
-                        Contact
-                    </h5>
-                    <p>Info@developer.com</p>
-                    <p>07567 375491</p>
-                </div>
-            </div>
-            </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2020 Copyright Tristan Blackwell
-            <a class="grey-text text-lighten-4 right" href="#!">N/A</a>
-            </div>
-          </div>
-        </footer>
         </div>
     )
 }
+
+export default Home;

@@ -1,5 +1,5 @@
 
-export default function Work() {
+const Work = props => {
 
     return (
         <div id="workPage">
@@ -10,10 +10,18 @@ export default function Work() {
                 </div>
             </div>
             <section id="workPortfolio" className="center">
-                <p>Work 1</p>
-                <p>Work 2</p>
-                <p>Work 3</p>
+                {props.examples.map(work => {
+                    return (
+                        <div className="workItem" key={work.name}>
+                            <img className="workThumbnail" src={work.thumbnail.url} alt="logo" />
+                            <h5 className="workName">{work.name}</h5>
+                            <p className="workTag">{work.tagline}</p>
+                        </div>
+                    )
+                })}
             </section>
         </div>
     )
 }
+
+export default Work;
