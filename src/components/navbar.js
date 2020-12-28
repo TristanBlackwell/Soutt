@@ -29,8 +29,8 @@ export default function Navbar() {
                 <Link to="/" className="active middle">Home</Link>
                 <Link to="/work" className="middle">Work</Link>
                 <Link to="/services" className="middle">Services</Link>
-                <Link to="/about" className="middle" className="aboutLink">About</Link>
-                <Link to="/blog" className="middle" className="blogLink">Blog</Link>
+                <Link to="/about" className="middle">About</Link>
+                <Link to="/blog" className="middle">Blog</Link>
             </div>
             <div className="contact">
                 <a href="tel: 07567 375491">

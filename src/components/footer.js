@@ -4,20 +4,22 @@ export default function Footer() {
     return (
         <div id="footerArea">
             <section id="ContactSection" className="wave wave-top" data-aos="fade-up">
-                        <div className="row">
-                            <div className="col l6 s12">
-                                <h1 id="ContactTitle">Let's get it on!</h1>
-                            </div>
-                            <div className="col l6 s12" id="ContactInfo">
-                                <h4>Interested in working together?</h4>
-                                <p>If you've got all the way to this point why not send an email?
-                                    I'm taking on projects right now so would love to hear some ideas
-                                    and get creating!
-                                </p>
-                                <div id="ContactButton">Get in touch</div>
-                            </div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col l6 s12">
+                            <h1 id="ContactTitle">Let's get it on!</h1>
                         </div>
-                </section>
+                        <div className="col l6 s12" id="ContactInfo">
+                            <h4>Interested in working together?</h4>
+                            <p>If you've got all the way to this point why not send an email?
+                                I'm taking on projects right now so would love to hear some ideas
+                                and get creating!
+                            </p>
+                            <div id="ContactButton">Get in touch</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
                 <footer className="page-footer">
             <div className="container">
                 <div className="row">

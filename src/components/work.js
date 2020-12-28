@@ -21,17 +21,21 @@ const Work = props => {
                         <Route path={match.path}>
                         <section id="workPortfolio">
                             <div className="container">
-                                {props.examples.map((work, index) => {
-                                    return (
-                                        <Link to={match.url + "/" + index} key={work.name}>
-                                            <div className="workItem center">
-                                                <img className="workThumbnail" src={work.thumbnail.url} alt="logo" />
-                                                <h5 className="workName">{work.name}</h5>
-                                                <p className="workTag">{work.tagline}</p>
+                                <div className="row">
+                                    {props.examples.map((work, index) => {
+                                        return (
+                                            <div className="col s12 m6 l4" key={work.name}>
+                                                <Link to={match.url + "/" + index}>
+                                                    <div className="workItem center">
+                                                        <img className="workThumbnail" src={work.thumbnail.url} alt="logo" />
+                                                        <h5 className="workName">{work.name}</h5>
+                                                        <p className="workTag">{work.tagline}</p>
+                                                    </div>
+                                                </Link>
                                             </div>
-                                        </Link>
-                                    )
-                                })}
+                                        )
+                                    })}
+                                </div>
                             </div>
                         </section>
                         </Route>
