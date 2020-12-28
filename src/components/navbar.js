@@ -31,6 +31,7 @@ export default function Navbar() {
                 <Link to="/services" className="middle">Services</Link>
                 <Link to="/about" className="middle">About</Link>
                 <Link to="/blog" className="middle">Blog</Link>
+                <Link to="/contact" className="middle">Contact</Link>
             </div>
             <div className="contact">
                 <a href="tel: 07567 375491">

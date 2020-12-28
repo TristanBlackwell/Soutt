@@ -26,7 +26,7 @@ const Work = props => {
                                         return (
                                             <div className="col s12 m6 l4" key={work.name}>
                                                 <Link to={match.url + "/" + index}>
-                                                    <div className="workItem center">
+                                                    <div className="workItem">
                                                         <img className="workThumbnail" src={work.thumbnail.url} alt="logo" />
                                                         <h5 className="workName">{work.name}</h5>
                                                         <p className="workTag">{work.tagline}</p>

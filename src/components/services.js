@@ -57,17 +57,17 @@ export default function Services() {
 
     return (
         <div id="servicesPage">
-            <div className="NavCover">
-                <div className="container">
-                    <h1 id="servicesHeading">Good Design is good business.</h1>
-                    <p>I can provide a range of services depending on needs</p>
-                </div>
-            </div>
             <Switch>
                 <Route path={match.path + "/:serviceId"}>
                     <Service services={services} />
                 </Route>
                 <Route path={match.path}>
+                    <div className="NavCover">
+                        <div className="container">
+                            <h1 id="servicesHeading">Good Design is good business.</h1>
+                            <p>I can provide a range of services depending on needs</p>
+                        </div>
+                    </div>
                     <div className="container">
                         <h2 id="servicesTitle">Services</h2>
                             <div className="strike"></div>
@@ -75,6 +75,7 @@ export default function Services() {
                             {services.sort().map(service => {
                                 return (
                                     <div className="serviceItem col s12 m6 l4" key={service.name}>
+                                        <img src={service.thumbnail.url} alt="thumbnail"/>
                                         <h5 className="serviceItemName">{service.name}</h5>
                                         <p className="serviceItemDescription">{service.shortDescription}</p>
                                         <Link to={match.url + "/" + service.id}>
