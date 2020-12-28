@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import plans from "../images/plans.jpg";
 
 const Home = (props) => {
@@ -38,14 +39,17 @@ const Home = (props) => {
             <section id="homeWorkSection" className="container" data-aos="fade-down">
                 <h2>Recent work</h2>
                 <div className="strike"></div>
-                <div id="homeWorkExamples">
-                    {props.examples.map(example => {
+                <div id="homeWorkExamples" className="row">
+                    {props.examples.map((example, index) => {
                         return (
-                            <div className="workExample" key={example.name}>
-                                <img  className="exampleThumbnail" src={example.thumbnail.url} alt="logo" />
-                                <h5 className="exampleName">{example.name}</h5>
-                                <p className="exampleTag">{example.tagline}</p>
-                                <a className="exampleLink" href="#thiswork">View project</a>
+                            <div className="col s12 m6 l4" key={example.name}>
+                                <Link to={"/work/" + index}>
+                                    <div className="workExample">
+                                        <img  className="exampleThumbnail" src={example.thumbnail.url} alt="logo" />
+                                        <h5 className="exampleName">{example.name}</h5>
+                                        <p className="exampleTag">{example.tagline}</p>
+                                    </div>
+                                </Link>
                             </div>
                         )
                     })}
@@ -54,7 +58,7 @@ const Home = (props) => {
             <div id="homeAbout" className="container" data-aos="fade-left">
                 <div id="homeAboutContent">
                     <img id="plansImg" src={plans} alt="wireframe" />
-                    <div id="contentText">
+                    <div id="contentText" className="row">
                         <h3>About Tristan</h3>
                         <div className="strike"></div>
                         <p>As a designer & developer that never stops learning, I am to
