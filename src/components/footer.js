@@ -38,8 +38,11 @@ export default function Footer() {
                         <ul>
                             <li>Web Design</li>
                             <li>Web Development</li>
+                            <li>Ecommerce Functionality</li>
                             <li>Servicing Contracts</li>
+                            <li>Copywriting</li>
                             <li>Online Presence/SEO</li>
+
                         </ul>
                     </div>
                     <div className="col l4 s12" id="footerContact">

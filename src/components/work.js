@@ -8,10 +8,10 @@ const Work = props => {
 
     return (
         <div id="workPage">
-            <div className="NavCover">
+            <div className="NavCover" >
                 <div className="container">
-                    <h1>See my Work</h1>
-                    <p>Below you can see some of my latest projects and get an idea of the work I do.</p>
+                    <h1>Work</h1>
+                    <p>View some of my recent projects.</p>
                 </div>
             </div>
                     <Switch>
@@ -24,7 +24,7 @@ const Work = props => {
                                 <div className="row">
                                     {props.examples.map((work, index) => {
                                         return (
-                                            <div className="col s12 m6 l4" key={work.name}>
+                                            <div className="col s12 m6 l4" key={work.name} data-aos="fade-up">
                                                 <Link to={match.url + "/" + index}>
                                                     <div className="workItem">
                                                         <img className="workThumbnail" src={work.thumbnail.url} alt="logo" />

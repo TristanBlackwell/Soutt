@@ -4,9 +4,9 @@ export default function About() {
 
     return (
         <div id="aboutPage">
-            <div className="NavCover">
+            <div className="NavCover" data-aos="fade-left">
                 <div className="container">
-                    <h1>Be yourself, everyone else is already taken.</h1>
+                    <h1>Be yourself, everyone else is already taken<strong>.</strong></h1>
                     <p></p>
                 </div>
             </div>

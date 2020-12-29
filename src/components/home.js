@@ -36,23 +36,25 @@ const Home = (props) => {
                     </div>
                 </div>
             </section>
-            <section id="homeWorkSection" className="container" data-aos="fade-down">
-                <h2>Recent work</h2>
-                <div className="strike"></div>
-                <div id="homeWorkExamples" className="row">
-                    {props.examples.map((example, index) => {
-                        return (
-                            <div className="col s12 m6 l4" key={example.name}>
-                                <Link to={"/work/" + index}>
-                                    <div className="workExample">
-                                        <img  className="exampleThumbnail" src={example.thumbnail.url} alt="logo" />
-                                        <h5 className="exampleName">{example.name}</h5>
-                                        <p className="exampleTag">{example.tagline}</p>
-                                    </div>
-                                </Link>
-                            </div>
-                        )
-                    })}
+            <section id="homeWorkSection" data-aos="fade-down">
+                <div className="container">
+                    <h2>Recent work</h2>
+                    <div className="strike"></div>
+                    <div id="homeWorkExamples" className="row">
+                        {props.examples.map((example, index) => {
+                            return (
+                                <div className="col s12 m6 l4" key={example.name}>
+                                    <Link to={"/work/" + index}>
+                                        <div className="workExample">
+                                            <img  className="exampleThumbnail" src={example.thumbnail.url} alt="logo" />
+                                            <h5 className="exampleName">{example.name}</h5>
+                                            <p className="exampleTag">{example.tagline}</p>
+                                        </div>
+                                    </Link>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </section>
             <div id="homeAbout" className="container" data-aos="fade-left">

@@ -62,10 +62,10 @@ export default function Services() {
                     <Service services={services} />
                 </Route>
                 <Route path={match.path}>
-                    <div className="NavCover">
+                    <div className="NavCover" data-aos="fade-left">
                         <div className="container">
-                            <h1 id="servicesHeading">Good Design is good business.</h1>
-                            <p>I can provide a range of services depending on needs</p>
+                            <h1 id="servicesHeading">Good Design is good business</h1>
+                            <p>Discover the various services I offer</p>
                         </div>
                     </div>
                     <div className="container">
