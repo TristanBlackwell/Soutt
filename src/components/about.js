@@ -6,7 +6,7 @@ export default function About() {
         <div id="aboutPage">
             <div className="NavCover" data-aos="fade-left">
                 <div className="container">
-                    <h1>Be yourself, everyone else is already taken<strong>.</strong></h1>
+                    <h1 id="aboutHeading">Be yourself, everyone else is already taken<strong>.</strong></h1>
                     <p></p>
                 </div>
             </div>

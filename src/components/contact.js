@@ -22,7 +22,7 @@ export default function Contact() {
             </div>
             <div id="contactArea" data-aos="zoom-out">
                 <div className="container center">
-                <h4>Time sensitive? Send me an <a>email</a> or give me a <a>ring</a> instead</h4>
+                <h4>Time sensitive? Send me an <a href="#email">email</a> or give me a <a href="#phone">ring</a> instead</h4>
                 <h5>or...</h5>
                     <form id="contactForm">
                         <div>
