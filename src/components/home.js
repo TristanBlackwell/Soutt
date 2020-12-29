@@ -75,10 +75,39 @@ const Home = (props) => {
                     <h2>"Digital design is like painting, except the paint never dries."</h2>
                     <div className="strike"></div>
                     <ol id="processList">
-                        <li className="process">Research & Development</li>
-                        <li className="process">Templating & Wireframing</li>
-                        <li className="process">Development Process</li>
-                        <li className="process">Continous Deployment</li>
+                        <li className="process">
+                            <p>Research & Development</p>
+                            <p className="processDescription">The building doesn't begin until I have learnt as much as
+                                possible about you and/or your business. Taking the time
+                                on this stage helps create the game plan going forward to
+                                solve the problems or construct the ideas you have brought forward
+                                and gives us both clarity and confidence we are heading towards achievement.
+                            </p>
+                        </li>
+                        <li className="process">
+                            <p>Templating & Wireframing</p>
+                            <p className="processDescription">This is the iterative stage of designing the look
+                                and feel that will be present across the site and should
+                                align perfectly with your business image and ethos. On top
+                                of this is building a UX that is intuitive for all users.
+                            </p>
+                        </li>
+                        <li className="process">
+                            <p>Development Process</p>
+                            <p className="processDescription">At this stage your vision will begin to come to life. The
+                                work from the earlier stages will come to fruition as I build
+                                the site to the highest level of quality, performance and security.
+                                Implemented alongside this is any additional scope we may have
+                                discussed such as a CMS should you wish to edit your own content.
+                            </p>
+                        </li>
+                        <li className="process">
+                            <p>Continous Deployment</p>
+                            <p className="processDescription">Your new pride and joy is likely to need some aftercare into the
+                                future. I offer various servicing packages to maintain your site
+                                and build on our relation for the long term.
+                            </p>
+                        </li>
                     </ol>
                 </div>
             </section>
