@@ -27,7 +27,7 @@ export default function Contact() {
                     <form id="contactForm">
                         <div>
                             <span>Hi my name is</span> 
-                            <input className="contactInput" id="contactName" type="text" placeholder="Lulu"/>
+                            <input className="contactInput" id="contactName" type="text" placeholder="Name"/>
                             <span>and I'd love to chat to Tristan about</span>
                             <Select options={options} isMulti placeholder={<p>Web Design</p>} />
                             <br/>

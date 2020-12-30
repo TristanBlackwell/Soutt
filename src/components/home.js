@@ -43,7 +43,7 @@ const Home = (props) => {
                     <div id="homeWorkExamples" className="row">
                         {props.examples.map((example, index) => {
                             return (
-                                <div className="col s12 m6 l4" key={example.name}>
+                                <div className="col s12 m6 l4 center" key={example.name}>
                                     <Link to={"/work/" + index}>
                                         <div className="workExample">
                                             <img  className="exampleThumbnail" src={example.thumbnail.url} alt="logo" />

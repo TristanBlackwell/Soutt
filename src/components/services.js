@@ -71,11 +71,11 @@ export default function Services() {
                     <div className="container">
                         <h2 id="servicesTitle">Services</h2>
                             <div className="strike"></div>
-                            <div className="row">
+                            <div className="row center">
                             {services.sort().map(service => {
                                 return (
                                     <div className="serviceItem col s12 m6 l4" key={service.name}>
-                                        <img src={service.thumbnail.url} alt="thumbnail"/>
+                                        <img className="" src={service.thumbnail.url} alt="thumbnail"/>
                                         <h5 className="serviceItemName">{service.name}</h5>
                                         <p className="serviceItemDescription">{service.shortDescription}</p>
                                         <Link to={match.url + "/" + service.id}>

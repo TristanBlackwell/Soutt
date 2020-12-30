@@ -22,10 +22,10 @@ const Work = props => {
                         <section id="workPortfolio">
                             <div className="container">
                                 <div className="row">
-                                    {props.examples.map((work, index) => {
+                                    {props.examples.map(work => {
                                         return (
-                                            <div className="col s12 m6 l4" key={work.name} data-aos="fade-up">
-                                                <Link to={match.url + "/" + index}>
+                                            <div className="col s12 m6 l4 center" key={work.name} data-aos="fade-up">
+                                                <Link to={match.url + "/" + work.id}>
                                                     <div className="workItem">
                                                         <img className="workThumbnail" src={work.thumbnail.url} alt="logo" />
                                                         <h5 className="workName">{work.name}</h5>

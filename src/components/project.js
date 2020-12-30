@@ -9,6 +9,7 @@ const Project = props => {
         <div className="projectPage">
             <div className="container">
                 <h1 className="projectName">{props.examples[id].name}</h1>
+                <div className="strike"></div>
                 <div className="row">
                     <div className="col s12 l8 projectDescription">
                         <h5 className="projectSubheading">The project</h5>
