@@ -27,16 +27,16 @@ const Home = (props) => {
                     <div id="leftBrief">
                         <h3>Freelance web designer</h3>
                         <p>My name is Tristan, I'm a Computer Science student and freelance developer
-                            helping clients from all different areas to improve their online presence,
-                            innovate solutions and build fast & effiecent web apps tailored to each case
-                            to advance progress on both sides.
+                            helping clients from many different areas to improve their online presence,
+                            innovate solutions and build fast & efficient web apps tailored to each case
+                            to go further online.
                             <br />
-                            See some of the <Link to="/work">work</Link> I have done.
+                            View some of the <Link to="/work">work</Link> I have done.
                         </p>
                     </div>
                     <div id="rightBrief">
                         <h5>Have an idea that needs executing?</h5>
-                        <p>I am currently taking on work. Get in touch for us to share thoughts.</p>
+                        <p>I am currently taking on work. Get in touch and share some ideas.</p>
                         <a href="tel:07851934397">07851 934397</a>
                         <br />
                         <a href="mailto:tristan@soutt.co.uk">Tristan@soutt.co.uk</a>
@@ -70,10 +70,11 @@ const Home = (props) => {
                     <div id="contentText" className="row">
                         <h3>About Tristan</h3>
                         <div className="strike"></div>
-                        <p>As a designer & developer that never stops learning, I am to
-                            create the most beautiful sites I am capable of for every
-                            single client I work with. To complement the beauty, I insure
-                            maximal speed that does not compromise in any aspect.
+                        <p>As a designer & developer that never stops learning, I aim to
+                            create beautiful sites for every
+                            single client I work with, complemented by the
+                            maximum performance that does not compromise in any aspect to
+                            take you a step ahead of everyone else.
                         </p>
                         <Link to="/about">
                             <div id="homeAboutButton">Discover more about me</div>
@@ -91,16 +92,16 @@ const Home = (props) => {
                             <p className="processDescription">The building doesn't begin until I have learnt as much as
                                 possible about you and/or your business. Taking the time
                                 on this stage helps create the game plan going forward to
-                                solve the problems or construct the ideas you have brought forward
+                                solve the problems and construct the ideas you have brought forward
                                 and gives us both clarity and confidence we are heading towards achievement.
                             </p>
                         </li>
                         <li className="process">
-                            <p>Templating & Wireframing</p>
+                            <p>Templating & Prototyping</p>
                             <p className="processDescription">This is the iterative stage of designing the look
                                 and feel that will be present across the site and should
-                                align perfectly with your business image and ethos. On top
-                                of this is building a UX that is intuitive for all users.
+                                align perfectly with your business image and ethos to extend your online
+                                presence further and allow users to intuitively interact with your business.
                             </p>
                         </li>
                         <li className="process">
@@ -115,8 +116,8 @@ const Home = (props) => {
                         <li className="process">
                             <p>Continous Deployment</p>
                             <p className="processDescription">Your new pride and joy is likely to need some aftercare into the
-                                future. I offer various servicing packages to maintain your site
-                                and build on our relation for the long term.
+                                future. I offer various servicing packages to maintain your site, ensure ongoing
+                                performance without compromise and build on our relation for the long term.
                             </p>
                         </li>
                     </ol>

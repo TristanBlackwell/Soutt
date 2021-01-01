@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 const ReactMarkdown = require('react-markdown')
 
 const Post = props => {
@@ -19,7 +19,9 @@ const Post = props => {
                 </div>
             </div>
             <div className="returnButtonContainer center">
-                <div className="returnButton">&#8592; Back to posts</div>
+                <Link to="/blog">
+                    <div className="returnButton">&#8592; Back to posts</div>
+                </Link>
             </div>
         </div>
     )

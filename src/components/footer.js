@@ -12,7 +12,7 @@ export default function Footer() {
                         </div>
                         <div className="col l6 s12" id="ContactInfo">
                             <h4>Interested in working together?</h4>
-                            <p>If you've got all the way to this point why not send an email?
+                            <p>You've reached the bottom, why not send me an email?
                                 I'm taking on projects right now so would love to hear some ideas
                                 and get creating!
                             </p>
@@ -30,8 +30,9 @@ export default function Footer() {
                         <h5 className="footerTitle">
                             Areas
                         </h5>
-                        <p>Living in Oxford, I service the city and surrounding areas.
-                            I am also open to remote work so if this is applicable I would be happy to discuss.
+                        <p>Living in Oxfordshire, I service the city and surrounding areas.
+                            I am also open to remote work and consider all potential projects
+                            so don't hesitate to ask.
                         </p>
                     </div>
                     <div className="col l4 s12" id="footerServices">

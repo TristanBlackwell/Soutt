@@ -36,12 +36,8 @@ export default function RecentBanner() {
             console.error(errors);
             }
 
-            let sorted = data.blogPostCollection.items.sort(function(a, b) {
-                while (posts < 3) {
-                  posts++;
-                  return b.id - a.id;
-                }
-                return null;
+            let sorted = data.blogPostCollection.items.slice(0, 3).sort(function(a, b) {
+                return b.id - a.id;
             })
 
             setRecents(sorted);

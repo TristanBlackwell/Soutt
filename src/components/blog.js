@@ -39,7 +39,7 @@ export default function Blog() {
             }
 
             let sorted = data.blogPostCollection.items.sort(function(a, b) {
-                return a.id - b.id
+                return b.id - a.id
             })
 
             setBlogPosts(sorted);
@@ -59,7 +59,7 @@ export default function Blog() {
             <div id="blogPage">
                 <div className="NavCover">
                     <div className="container">
-                        <h1>In the mind of a Dev</h1>
+                        <h1>In the mind of a dev</h1>
                         <p>Read my thoughts on various topics or get some advice</p>
                     </div>
                 </div>
