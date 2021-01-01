@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import plans from "../images/plans.jpg";
 
@@ -17,9 +18,9 @@ const Home = (props) => {
                         <Link to="/contact">
                             <div id="touch" className="heroButton"><em>Get in touch</em></div>
                         </Link>
-                        <a href="#homeProcessSection">
+                        <ScrollLink to="homeProcessSection" smooth={true}>
                          <div id="process" className="heroButton"><em>See my process</em></div>
-                        </a>
+                        </ScrollLink>
                     </div>
                 </div>
                 <div id="heroBrief" data-aos="fade-left">

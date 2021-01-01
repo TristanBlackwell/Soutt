@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
-
-import Post from "./post";
+import { Link, Switch } from "react-router-dom";
 
 const query = `
 {
@@ -19,8 +17,6 @@ const query = `
 let posts = 0;
 
 export default function RecentBanner() {
-
-    let match = useRouteMatch();
 
     const [recents, setRecents] = useState(null);
 
@@ -41,7 +37,11 @@ export default function RecentBanner() {
             }
 
             let sorted = data.blogPostCollection.items.sort(function(a, b) {
-                return b.id - a.id
+                while (posts < 3) {
+                  posts++;
+                  return b.id - a.id;
+                }
+                return null;
             })
 
             setRecents(sorted);
@@ -62,14 +62,14 @@ export default function RecentBanner() {
               <div className="strike"></div>
               <div className="row">
                 {recents.map(post => {
-                  return (
-                    <div className="col s12 m6 l4 recentPost" key={post.title}>
-                      <Link to={"/blog/" + post.id}>
-                        <h5 className="recentTitle">{post.title}</h5>
-                        <p className="recentDescription">{post.shortDescription}</p>
-                      </Link>
-                    </div>
-                  )
+                    return (
+                      <div className="col s12 m6 l4 recentPost" key={post.title}>
+                        <Link to={"/blog/" + post.id}>
+                          <h5 className="recentTitle">{post.title}</h5>
+                          <p className="recentDescription">{post.shortDescription}</p>
+                        </Link>
+                      </div>
+                    )
                 })}
               </div>
             </div>
