@@ -2,7 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
   overflow-x: hidden;
 }
 
@@ -10,6 +11,7 @@ body {
   border-bottom: 5px solid #36b6cc;
   border-radius: 5em;
   width: 4em;
+  animation: fadeInLeft 1s;
 }
 
 .navbar {
@@ -66,6 +68,7 @@ body {
   color: black;
   font-weight: 600;
   letter-spacing: 1px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
 }
 
@@ -92,15 +95,15 @@ body {
 
 #heroContent {
   width: 40%;
-  margin-top: 10vh;
+  margin-top: 20vh;
   margin-bottom: 40vh;
   margin-left: 10vw;
+  animation: backInLeft 2s 1;
 }
 
 #heroContent h1 {
   margin: 0;
   font-family: "Lato", sans-serif;
-  animation: enlargeText 3s 1;
 }
 
 @keyframes enlargeText {
@@ -145,11 +148,18 @@ body {
   color: tomato;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   animation: bounce 3s 1;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 #process {
   border: 3px solid white;
+  color: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.processDescription {
+  color: gray;
+  font-size: 0.9em;
 }
 
 #heroBrief {
@@ -206,24 +216,61 @@ body {
 }
 
 #homeWorkSection {
+  background-color: #f5f5f5;
   padding-top: 5vh;
-  margin-bottom: 15vh;
+  padding-bottom: 5vh;
+  margin-bottom: 10vh;
 }
 
 #homeWorkSection h2 {
   font-family: "Lato", sans-serif;
-  color: tomato;
+  color: #361b5f;
 }
 
 #homeWorkExamples {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
   margin-top: 5vh;
 }
 
-.workExample {
+.workExample,
+.workItem {
   display: flex;
-  border: 1px solid red;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.workExample:hover,
+.workItem:hover {
+  transform: translateY(-1em);
+}
+
+.exampleThumbnail,
+.workThumbnail {
+  width: 100%;
+  height: 20em;
+}
+
+.exampleName,
+.workName {
+  margin-bottom: 0;
+  font-family: "Lato", sans-serif;
+  color: #361b5f;
+}
+
+.exampleTag,
+.workTag {
+  color: grey;
+  font-size: 1.25em;
+}
+
+.exampleLink {
+  color: tomato;
+  font-size: 1.25em;
+  transition: all 0.3s ease-in-out;
+}
+
+.exampleLink:hover {
+  color: #36b6cc;
+  text-decoration: underline;
 }
 
 #homeAbout {
@@ -236,7 +283,7 @@ body {
 }
 
 #homeAboutContent img {
-  opacity: 0.3;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -254,7 +301,7 @@ body {
 
 #contentText h3 {
   font-family: "Lato", sans-serif;
-  color: tomato;
+  color: #361b5f;
 }
 
 #contentText p {
@@ -267,11 +314,11 @@ body {
 #homeAboutButton {
   display: inline-block;
   padding: 0.5em 1.5em;
-  border: 2px solid tomato;
-  border-color: tomato;
+  border: 2px solid #361b5f;
   border-radius: 2em;
-  color: tomato;
+  color: #361b5f;
   font-size: 1.25em;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
 }
 
@@ -287,7 +334,7 @@ body {
 
 #homeProcessSection .container h2 {
   width: 60%;
-  color: tomato;
+  color: #361b5f;
   font-family: "Lato", sans-serif;
 }
 
@@ -298,13 +345,14 @@ body {
 
 .process {
   width: 65%;
+  margin-bottom: 2em;
   padding-bottom: 0.5em;
   font-size: 1.5em;
   color: tomato;
-  border-bottom: 2px solid #36b6cc;
+  border-bottom: 2px solid #361b5f;
 }
 
-#homeContactSection {
+#ContactSection {
   padding-top: 5em;
   padding-bottom: 3em;
   background: rgb(78, 47, 57);
@@ -371,27 +419,28 @@ body {
   );
 }
 
-#homeContactTitle {
+#ContactTitle {
+  width: 60%;
   margin: 0;
   font-family: "Lato", sans-serif;
   color: white;
 }
 
-#homeContactInfo {
+#ContactInfo {
   color: white;
 }
 
-#homeContactInfo h4 {
+#ContactInfo h4 {
   margin: 0;
   font-family: "Lato";
   letter-spacing: 1px;
 }
 
-#homeContactInfo p {
+#ContactInfo p {
   width: 80%;
 }
 
-#homeContactButton {
+#ContactButton {
   display: inline-block;
   padding: 0.5em 1.5em;
   border-radius: 2em;
@@ -403,26 +452,402 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-#homeContactButton:hover {
+#ContactButton:hover {
   transform: translateX(1em);
 }
 
-#workNavCover {
-  height: 30vh;
+.NavCover {
+  height: 35vh;
   background-color: tomato;
   color: white;
+  animation: backInDown 1s;
 }
 
-#workNavCover .container h1 {
+.NavCover .container h1 {
   margin-top: 0;
   padding-top: 2em;
   font-family: "Lato", sans-serif;
 }
 
+.NavCover .container p {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 #workPortfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-  margin-top: 5vh;
+  background-color: #f5f5f5;
+  animation: bounceInLeft 1s;
+}
+
+#workPortfolio .container {
+  padding-top: 5vh;
+  padding-bottom: 7vh;
+}
+
+.projectPage {
+  width: 100vw;
+}
+
+.projectPage .container {
+  padding-bottom: 5vh;
+}
+
+.projectName {
+  color: #361b5f;
+  font-family: "Lato", sans-serif;
+}
+
+.projectSubheading {
+  margin-top: 3em;
+  color: #361b5f;
+  font-family: "Lato", sans-serif;
+}
+
+.projectDescription {
+  white-space: pre-wrap;
+  font-size: 1.25em;
+  color: grey;
+}
+
+.projectList li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #361b5f; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.projectList li {
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  color: grey;
+}
+
+.projectLink {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border: 2px solid tomato;
+  border-radius: 2em;
+  color: tomato;
+  font-size: 1.25em;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.projectLink:hover {
+  transform: translateX(1em);
+}
+
+.projectGallery {
+  background-color: #f5f5f5;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.projectCap {
+  width: 100%;
+  height: auto;
+  padding: 3em;
+}
+
+#servicesPage .NavCover {
+  height: 40vh;
+}
+
+#servicesHeading {
+  width: 45%;
+}
+
+#servicesTitle {
+  font-family: "Lato", sans-serif;
+  color: #361b5f;
+  animation: fadeInLeft 1s;
+}
+
+.serviceItem {
+  margin: 2em 0 3em 0;
+  animation: fadeInUp 1s;
+  transition: all 0.3s ease-in-out;
+}
+
+.serviceItem:hover {
+  transform: translateY(-1em);
+}
+
+.serviceItemName {
+  font-family: "Lato", sans-serif;
+  color: #361b5f;
+}
+
+.serviceItemDescription {
+  width: 100%;
+  color: gray;
+  font-size: 1.1em;
+}
+
+.serviceItemButton {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border: 2px solid #361b5f;
+  border-radius: 2em;
+  color: #361b5f;
+  font-size: 1.25em;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.serviceItemButton:hover {
+  border: 2px solid tomato;
+  color: tomato;
+}
+
+.servicePage .NavCover {
+  height: 35vh !important;
+}
+
+.service .container .row {
+  margin-top: 4em;
+  margin-bottom: 5em;
+}
+
+.serviceSubHeading {
+  font-family: "Lato", sans-serif;
+  color: #361b5f;
+}
+
+.serviceDescription {
+  white-space: pre-wrap;
+  font-size: 1.25em;
+  color: grey;
+}
+
+#aboutPage .NavCover .container h1 {
+  width: 70%;
+}
+
+strong {
+  color: #36b6cc;
+}
+
+#aboutContent {
+  margin-bottom: 5vh;
+  animation: lightSpeedInRight 1s;
+}
+
+#aboutContent h3 {
+  margin: 1em 0;
+  font-family: "Lato", sans-serif;
+  color: #361b5f;
+  transition: all 0.3s ease-in-out;
+}
+
+#aboutContent h3:hover {
+  color: #36b6cc;
+}
+
+#aboutContent p {
+  margin: auto;
+  width: 60%;
+  text-align: left;
+  font-size: 1.25em;
+  color: grey;
+}
+
+.aboutBlock .container p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#aboutBlock1 {
+  background-color: tomato;
+  color: white;
+  animation: slideInLeft 1s;
+}
+
+#aboutBlock2 {
+  color: tomato;
+  animation: slideInRight 1s;
+}
+
+#contactArea {
+  margin: 5em 0;
+  font-family: "Lato", sans-serif;
+}
+
+#contactArea .container h4 {
+  color: #361b5f;
+  margin-bottom: 1em;
+  animation: pulse 1s;
+  animation-delay: 2s;
+}
+
+#contactArea .container h4 a {
+  text-decoration: underline;
+}
+
+#contactArea .container h5 {
+  color: #361b5f;
+  margin-bottom: 1em;
+}
+
+#contactForm div span {
+  color: grey;
+  font-size: 1.25em;
+}
+
+#contactEmail {
+  width: 17em !important;
+}
+
+.contactInput {
+  display: inline !important;
+  width: 10em !important;
+  margin: 0 0.5em !important;
+  color: #361b5f;
+  font-weight: 600 !important;
+  font-size: 1.25em !important;
+  border-bottom: 2px solid #361b5f !important;
+}
+
+#contactName {
+  width: 5em !important;
+}
+
+.css-2b097c-container {
+  display: inline-block;
+  width: 25em;
+  margin: 1em 0;
+  margin-left: 1em;
+}
+
+.css-1pahdxg-control:hover {
+  border-color: #361b5f;
+}
+
+.contactInput::placeholder {
+  color: #361b5f;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+#contactSubmit {
+  margin-top: 3em;
+  background-color: transparent;
+  border: 2px solid #361b5f;
+  border-radius: 2em;
+  color: #361b5f;
+  font-size: 1.25em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.5em 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+#contactSubmit:hover {
+  transform: translateY(-0.5em);
+}
+
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #000;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type="text"].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type="text"].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+#blogPosts {
+  margin-top: 5em;
+}
+
+.blogItemName {
+  font-family: "Oswald", sans-serif;
+  color: #361b5f;
+}
+
+.blogItemDescription {
+  width: 90%;
+  color: gray;
+}
+
+.blogContent {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.blogContent h4 {
+  font-family: "Lato", sans-serif;
+  color: #361b5f;
+}
+
+.blogPost .NavCover {
+  height: 30vh;
+}
+
+.blogContent .container p {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  white-space: pre-wrap;
+  color: grey;
+  font-size: 1.2em;
+}
+
+.returnButton {
+  display: inline-block;
+  margin: 0 auto 5em auto;
+  padding: 0.5em 1.5em;
+  border: 2px solid #361b5f;
+  border-radius: 2em;
+  color: #361b5f;
+  font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.returnButton:hover {
+  transform: translateX(-1em);
+  border-color: tomato;
+  color: tomato;
+}
+
+.recentBanner {
+  padding: 5vh 0;
+}
+
+.recentBanner .container h3 {
+  font-family: "Lato", sans-serif;
+  color: #361b5f;
+}
+
+.recentBanner .container .strike {
+  margin-bottom: 3vh;
+}
+
+.recentPost {
+  animation: slideInUp 1s;
+}
+
+.recentTitle {
+  color: #361b5f;
+  font-family: "Lato", sans-serif;
+}
+
+.recentDescription {
+  color: gray;
 }
 
 footer {
@@ -449,6 +874,128 @@ footer {
   font-size: 1.1em;
 }
 
-#footerContact p {
+#footerServices ul li a {
+  color: white;
+}
+
+#footerContact a p {
   font-size: 1.1em;
+  color: white;
+}
+
+@media only screen and (max-width: 1300px) {
+  #servicesHeading,
+  #aboutHeading {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #heroSection {
+    height: 170vh;
+  }
+
+  #heroContent {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+
+  #homeAbout {
+    padding-bottom: 30vh;
+  }
+
+  #aboutPage .NavCover {
+    height: 50vh;
+  }
+
+  #ContactTitle {
+    margin-bottom: 0.5em;
+  }
+
+  #ContactInfo {
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .logo,
+  .contact {
+    display: none;
+  }
+
+  #heroSection {
+    height: 160vh;
+  }
+
+  #heroContent {
+    width: 80%;
+    margin-bottom: 10vh;
+  }
+
+  #heroContent h1 {
+    animation: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #heroContent {
+    margin-top: 10vh;
+  }
+
+  #heroBrief {
+    flex-direction: column;
+  }
+
+  #leftBrief,
+  #rightBrief {
+    width: 80%;
+  }
+
+  #rightBrief {
+    margin-left: 0;
+  }
+
+  #servicesPage .NavCover {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    width: 80vw;
+  }
+
+  #heroContent {
+    margin-left: 2vw;
+  }
+
+  #aboutPage .NavCover {
+    height: 65vh;
+  }
+
+  #contactPage .NavCover {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #heroSection {
+    height: 250vh;
+  }
+
+  #heroContent {
+    margin-top: 10vh;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #homeAbout {
+    height: 150vh;
+  }
 }

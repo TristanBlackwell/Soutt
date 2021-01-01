@@ -34,9 +34,9 @@ export default function Navbar() {
                 <Link to="/contact" className="middle">Contact</Link>
             </div>
             <div className="contact">
-                <a href="tel: 07567 375491">
+                <a href="tel: 07851934397">
                     <i className="fas fa-phone-alt"></i>
-                    <p>07567 375491</p>
+                    <p>07851 934397</p>
                 </a>
             </div>
         </div>

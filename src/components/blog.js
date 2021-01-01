@@ -57,28 +57,28 @@ export default function Blog() {
             </Route>
             <Route path={match.path}>
             <div id="blogPage">
-            <div className="NavCover">
-                <div className="container">
-                    <h1>In the mind of a Dev</h1>
-                    <p>Read my thoughts on various topics or get some advice</p>
-                </div>
-            </div>
-            <div id="blogPosts">
-                <div className="container">
-                    <div className="row">
-                        {blogPosts.map(post => {
-                            return (
-                                <div className="blogItem col s12 m6 l4" key={post.title}>
-                                    <Link to={match.url + "/" + post.id}>
-                                        <h4 className="blogItemName">{post.title}</h4>
-                                        <p className="blogItemDescription">{post.shortDescription}</p>
-                                    </Link>
-                                </div> 
-                            )
-                        })}
+                <div className="NavCover">
+                    <div className="container">
+                        <h1>In the mind of a Dev</h1>
+                        <p>Read my thoughts on various topics or get some advice</p>
                     </div>
                 </div>
-            </div>
+                <div id="blogPosts">
+                    <div className="container">
+                        <div className="row">
+                            {blogPosts.map(post => {
+                                return (
+                                    <div className="blogItem col s12 m6 l4" key={post.title}>
+                                        <Link to={match.url + "/" + post.id}>
+                                            <h4 className="blogItemName">{post.title}</h4>
+                                            <p className="blogItemDescription">{post.shortDescription}</p>
+                                        </Link>
+                                    </div> 
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
         </div>
             </Route>
         </Switch>

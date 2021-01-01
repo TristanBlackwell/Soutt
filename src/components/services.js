@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
 
 import Service from "./service";
+import RecentBanner from "./recentBanner";
 
 const query = `
 {
@@ -60,6 +61,7 @@ export default function Services() {
             <Switch>
                 <Route path={match.path + "/:serviceId"}>
                     <Service services={services} />
+                    <RecentBanner />
                 </Route>
                 <Route path={match.path}>
                     <div className="NavCover" data-aos="fade-left">
@@ -86,6 +88,7 @@ export default function Services() {
                             })}
                         </div>
                     </div>
+                    <RecentBanner />
                 </Route>
             </Switch>
         </div>

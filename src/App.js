@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,27 +9,102 @@ import "animate.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import Work from "./components/work";
+import Services from "./components/services";
+import About from "./components/about";
+import Blog from "./components/blog";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 
 AOS.init();
 
+const query = `
+{
+  workProjectCollection {
+    items {
+      id
+      name
+      tagline
+      services
+      link
+      description
+      capsCollection {
+        items {
+          url
+        }
+      }
+      thumbnail {
+        url
+      }
+    }
+  }
+}
+`
+
 function App() {
+
+  const [work, setWork] = useState(null);
+
+  useEffect(() => {
+    window
+      .fetch("https://graphql.contentful.com/content/v1/spaces/" + process.env.REACT_APP_SPACEID + "/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + process.env.REACT_APP_ACCESS_TOKEN,
+        },
+        body: JSON.stringify({ query }),
+      })
+      .then((response) => response.json())
+      .then(({ data, errors }) => {
+        if (errors) {
+          console.error(errors);
+        }
+
+        let sorted = data.workProjectCollection.items.sort(function(a, b) {
+          return a.id - b.id
+        })
+
+        setWork(sorted);
+      });
+  }, []);
+
+  if (!work) {
+    return "Loading all the good stuff..."
+  }
+
   return (
     <Router>
+      <ScrollToTop>
       <Navbar />
 
       <Switch>
         <Route exact path="/">
-            <Home />
+          <Home examples={work}/>
         </Route>
         <Route path="/work">
-            <Work />
+          <Work examples={work}/>
+        </Route>
+        <Route path="/services">
+          <Services />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/blog">
+          <Blog />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
       </Switch>
 
+    <Footer />
+    </ScrollToTop>
     </Router>
   );
 }

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import plans from "../images/plans.jpg";
 
+import RecentBanner from "./recentBanner";
+
 const Home = (props) => {
 
     return (
@@ -12,8 +14,12 @@ const Home = (props) => {
                         businesses solve their problems with creative, forward thinking.</em>
                     </p>
                     <div id="heroButtons">
-                        <div id="touch" className="heroButton"><em>Get in touch</em></div>
-                        <div id="process" className="heroButton"><em>See my process</em></div>
+                        <Link to="/contact">
+                            <div id="touch" className="heroButton"><em>Get in touch</em></div>
+                        </Link>
+                        <a href="#homeProcessSection">
+                         <div id="process" className="heroButton"><em>See my process</em></div>
+                        </a>
                     </div>
                 </div>
                 <div id="heroBrief" data-aos="fade-left">
@@ -24,15 +30,15 @@ const Home = (props) => {
                             innovate solutions and build fast & effiecent web apps tailored to each case
                             to advance progress on both sides.
                             <br />
-                            See some of the <a href="#work">work</a> I have done.
+                            See some of the <Link to="/work">work</Link> I have done.
                         </p>
                     </div>
                     <div id="rightBrief">
                         <h5>Have an idea that needs executing?</h5>
                         <p>I am currently taking on work. Get in touch for us to share thoughts.</p>
-                        <a href="#contact">07567 375491</a>
+                        <a href="tel:07851934397">07851 934397</a>
                         <br />
-                        <a href="#contact">info@developer.com</a>
+                        <a href="mailto:tristan@soutt.co.uk">Tristan@soutt.co.uk</a>
                     </div>
                 </div>
             </section>
@@ -68,7 +74,9 @@ const Home = (props) => {
                             single client I work with. To complement the beauty, I insure
                             maximal speed that does not compromise in any aspect.
                         </p>
-                        <div id="homeAboutButton">Discover more about me</div>
+                        <Link to="/about">
+                            <div id="homeAboutButton">Discover more about me</div>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -113,6 +121,7 @@ const Home = (props) => {
                     </ol>
                 </div>
             </section>
+            <RecentBanner />
         </div>
     )
 }

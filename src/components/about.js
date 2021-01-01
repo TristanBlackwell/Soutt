@@ -1,4 +1,4 @@
-
+import RecentBanner from "./recentBanner";
 
 export default function About() {
 
@@ -65,6 +65,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            <RecentBanner />
         </div>
     )
 }

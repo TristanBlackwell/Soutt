@@ -1,6 +1,7 @@
 import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
 
 import Project from "./project";
+import RecentBanner from "./recentBanner";
 
 const Work = props => {
 
@@ -17,6 +18,7 @@ const Work = props => {
                     <Switch>
                         <Route path={match.path + "/:projectId"}>
                             <Project examples={props.examples}/>
+                            <RecentBanner />
                         </Route>
                         <Route path={match.path}>
                         <section id="workPortfolio">
@@ -38,6 +40,7 @@ const Work = props => {
                                 </div>
                             </div>
                         </section>
+                        <RecentBanner />
                         </Route>
                     </Switch>
         </div>
