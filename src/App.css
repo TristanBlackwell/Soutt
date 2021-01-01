@@ -775,6 +775,12 @@ strong {
   box-shadow: 0 1px 0 0 #000;
 }
 
+.formMsg {
+  margin-top: 5vh;
+  color: #361b5f;
+  font-size: 1.5em;
+}
+
 #blogPosts {
   margin-top: 5em;
 }

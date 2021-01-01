@@ -79,9 +79,8 @@ function App() {
 
   return (
     <Router>
-      <ScrollToTop>
       <Navbar />
-
+      <ScrollToTop>
       <Switch>
         <Route exact path="/">
           <Home examples={work}/>

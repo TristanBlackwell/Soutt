@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const query = `
 {
@@ -13,8 +13,6 @@ const query = `
   }
 }
 `
-
-let posts = 0;
 
 export default function RecentBanner() {
 
@@ -51,7 +49,6 @@ export default function RecentBanner() {
     }
 
     return (
-      <Switch>
           <div className="recentBanner">
             <div className="container">
               <h3>Recent Posts</h3>
@@ -70,6 +67,5 @@ export default function RecentBanner() {
               </div>
             </div>
           </div>
-      </Switch>
     )
 }

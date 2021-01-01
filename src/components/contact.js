@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Select from 'react-select';
 
 const options = [
@@ -9,6 +10,28 @@ const options = [
   ]
 
 export default function Contact() {
+
+    const [status, setStatus] = useState("");
+
+    function submitForm(e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        console.log(data);
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                form.reset();
+                setStatus("SUCCESS");
+            } else {
+                setStatus("ERROR");
+            }
+        };
+        xhr.send(data);
+    }
 
     return (
         <div id="contactPage">
@@ -24,20 +47,22 @@ export default function Contact() {
                 <div className="container center">
                 <h4>Time sensitive? Send me an <a href="#email">email</a> or give me a <a href="#phone">ring</a> instead</h4>
                 <h5>or...</h5>
-                    <form id="contactForm">
+                    <form id="contactForm" onSubmit={submitForm} action="https://formspree.io/f/xqkggolo" method="POST">
                         <div>
                             <span>Hi my name is</span> 
-                            <input className="contactInput" id="contactName" type="text" placeholder="Name"/>
+                            <input className="contactInput" id="contactName" name="name" type="text" placeholder="Name"/>
                             <span>and I'd love to chat to Tristan about</span>
-                            <Select options={options} isMulti placeholder={<p>Web Design</p>} />
+                            <Select options={options} name="services" isMulti placeholder={<p>Web Design, Servicing etc...</p>} />
                             <br/>
                             <span>It's best to contact me on either</span>
-                            <input className="contactInput" id="contactEmail" type="email" placeholder="Email address"/>
+                            <input className="contactInput" id="contactEmail" name="email" type="email" placeholder="Email address"/>
                             <br />
                             <span>or on</span>
-                            <input className="contactInput" id="contactPhone" type="text" placeholder="Phone number"/>
+                            <input className="contactInput" id="contactPhone" name="phone" type="text" placeholder="Phone number"/>
                             <br />
-                            <button type="submit" id="contactSubmit">Send Enquiry</button>
+                            {status === "SUCCESS" ? <p className="formMsg">Thank you!</p> :
+                            <button type="submit" id="contactSubmit">Send Enquiry</button> }
+                            {status === "ERROR" && <p className="formMsg">Oh no! I couldn't send your message.</p>}
                         </div>
                     </form>
                 </div>
