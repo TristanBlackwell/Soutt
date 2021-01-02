@@ -14,7 +14,8 @@ body {
   animation: fadeInLeft 1s;
 }
 
-.navbar {
+.navbar,
+.navbarHome {
   position: fixed;
   top: 0;
   height: 10vh;
@@ -26,8 +27,16 @@ body {
   transition: top 0.3s;
 }
 
+.navbar {
+  animation: fadeInDown 1s;
+  animation-delay: 1s;
+}
+
 .navbar--hidden {
   top: -10vh;
+}
+
+.navLogo {
 }
 
 .navigation a {
@@ -158,7 +167,7 @@ body {
 }
 
 .processDescription {
-  color: gray;
+  color: rgb(90, 89, 89);
   font-size: 0.9em;
 }
 
@@ -258,7 +267,7 @@ body {
 
 .exampleTag,
 .workTag {
-  color: grey;
+  color: rgb(90, 89, 89);
   font-size: 1.25em;
 }
 
@@ -308,7 +317,7 @@ body {
   margin-top: 1em;
   margin-bottom: 1.5em;
   font-size: 1.25em;
-  color: grey;
+  color: rgb(90, 89, 89);
 }
 
 #homeAboutButton {
@@ -506,7 +515,7 @@ body {
 .projectDescription {
   white-space: pre-wrap;
   font-size: 1.25em;
-  color: grey;
+  color: rgb(90, 89, 89);
 }
 
 .projectList li::before {
@@ -522,7 +531,7 @@ body {
   margin-left: 1em;
   margin-bottom: 0.5em;
   font-size: 1.5em;
-  color: grey;
+  color: rgb(90, 89, 89);
 }
 
 .projectLink {
@@ -583,7 +592,7 @@ body {
 
 .serviceItemDescription {
   width: 100%;
-  color: gray;
+  color: rgb(90, 89, 89);
   font-size: 1.1em;
 }
 
@@ -625,7 +634,7 @@ body {
 .serviceDescription {
   white-space: pre-wrap;
   font-size: 1.25em;
-  color: grey;
+  color: rgb(90, 89, 89);
 }
 
 #aboutPage .NavCover .container h1 {
@@ -657,7 +666,7 @@ strong {
   width: 60%;
   text-align: left;
   font-size: 1.25em;
-  color: grey;
+  color: rgb(90, 89, 89);
 }
 
 .aboutBlock .container p {
@@ -673,6 +682,7 @@ strong {
 }
 
 #aboutBlock2 {
+  background-color: #f5f5f5;
   color: tomato;
   animation: slideInRight 1s;
 }
@@ -699,12 +709,16 @@ strong {
 }
 
 #contactForm div span {
-  color: grey;
+  color: rgb(90, 89, 89);
   font-size: 1.25em;
 }
 
 #contactEmail {
   width: 17em !important;
+}
+
+#contactPhone {
+  margin-bottom: 2vh !important;
 }
 
 .contactInput {
@@ -736,6 +750,11 @@ strong {
   color: #361b5f;
   font-weight: 600;
   font-size: 1.1em;
+}
+
+#contactText {
+  width: 30vw !important;
+  margin-top: 2vh !important;
 }
 
 #contactSubmit {
@@ -792,7 +811,7 @@ strong {
 
 .blogItemDescription {
   width: 90%;
-  color: gray;
+  color: rgb(90, 89, 89);
 }
 
 .blogContent {
@@ -814,7 +833,7 @@ strong {
   margin: auto;
   text-align: left;
   white-space: pre-wrap;
-  color: grey;
+  color: rgb(90, 89, 89);
   font-size: 1.2em;
 }
 
@@ -858,7 +877,8 @@ strong {
 }
 
 .recentDescription {
-  color: gray;
+  color: rgb(90, 89, 89);
+  font-size: 1.2em;
 }
 
 footer {
@@ -894,10 +914,29 @@ footer {
   color: white;
 }
 
+#privacyPolicy .container h4 {
+  color: #361b5f;
+  font-family: "Lato", sans-serif;
+}
+
+#privacyPolicy .container p {
+  color: rgb(90, 89, 89);
+  font-size: 1.25em;
+}
+
+#privacyPolicy .container ol li {
+  color: rgb(90, 89, 89);
+  font-size: 1.25em;
+}
+
 @media only screen and (max-width: 1300px) {
   #servicesHeading,
   #aboutHeading {
     width: 80% !important;
+  }
+
+  .blogPost .NavCover {
+    height: 40vh;
   }
 }
 
@@ -950,6 +989,10 @@ footer {
   #heroContent h1 {
     animation: none;
   }
+
+  .blogPost .NavCover {
+    height: 50vh;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -993,6 +1036,10 @@ footer {
   #contactPage .NavCover {
     height: 50vh;
   }
+
+  .blogPost .NavCover {
+    height: 65vh;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -1008,5 +1055,210 @@ footer {
 @media only screen and (max-width: 400px) {
   #homeAbout {
     height: 150vh;
+  }
+}
+
+.loading {
+  height: 100vh;
+  background: #361b5f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingWithin {
+  background: white;
+}
+
+.loadingWithin .loader .loader__bar {
+  background-color: #361b5f;
+}
+
+.loadingWithin .loader .loader__ball {
+  background-color: tomato;
+}
+
+.loader {
+  position: relative;
+  width: 75px;
+  height: 100px;
+}
+.loader__bar {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 50%;
+  background: #fff;
+  transform-origin: center bottom;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.loader__bar:nth-child(1) {
+  left: 0px;
+  transform: scale(1, 0.2);
+  animation: barUp1 4s infinite;
+}
+.loader__bar:nth-child(2) {
+  left: 15px;
+  transform: scale(1, 0.4);
+  animation: barUp2 4s infinite;
+}
+.loader__bar:nth-child(3) {
+  left: 30px;
+  transform: scale(1, 0.6);
+  animation: barUp3 4s infinite;
+}
+.loader__bar:nth-child(4) {
+  left: 45px;
+  transform: scale(1, 0.8);
+  animation: barUp4 4s infinite;
+}
+.loader__bar:nth-child(5) {
+  left: 60px;
+  transform: scale(1, 1);
+  animation: barUp5 4s infinite;
+}
+.loader__ball {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  animation: ball 4s infinite;
+}
+@keyframes ball {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(8px, -14px);
+  }
+  10% {
+    transform: translate(15px, -10px);
+  }
+  17% {
+    transform: translate(23px, -24px);
+  }
+  20% {
+    transform: translate(30px, -20px);
+  }
+  27% {
+    transform: translate(38px, -34px);
+  }
+  30% {
+    transform: translate(45px, -30px);
+  }
+  37% {
+    transform: translate(53px, -44px);
+  }
+  40% {
+    transform: translate(60px, -40px);
+  }
+  50% {
+    transform: translate(60px, 0);
+  }
+  57% {
+    transform: translate(53px, -14px);
+  }
+  60% {
+    transform: translate(45px, -10px);
+  }
+  67% {
+    transform: translate(37px, -24px);
+  }
+  70% {
+    transform: translate(30px, -20px);
+  }
+  77% {
+    transform: translate(22px, -34px);
+  }
+  80% {
+    transform: translate(15px, -30px);
+  }
+  87% {
+    transform: translate(7px, -44px);
+  }
+  90% {
+    transform: translate(0, -40px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes barUp1 {
+  0% {
+    transform: scale(1, 0.2);
+  }
+  40% {
+    transform: scale(1, 0.2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  90% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 0.2);
+  }
+}
+@keyframes barUp2 {
+  0% {
+    transform: scale(1, 0.4);
+  }
+  40% {
+    transform: scale(1, 0.4);
+  }
+  50% {
+    transform: scale(1, 0.8);
+  }
+  90% {
+    transform: scale(1, 0.8);
+  }
+  100% {
+    transform: scale(1, 0.4);
+  }
+}
+@keyframes barUp3 {
+  0% {
+    transform: scale(1, 0.6);
+  }
+  100% {
+    transform: scale(1, 0.6);
+  }
+}
+@keyframes barUp4 {
+  0% {
+    transform: scale(1, 0.8);
+  }
+  40% {
+    transform: scale(1, 0.8);
+  }
+  50% {
+    transform: scale(1, 0.4);
+  }
+  90% {
+    transform: scale(1, 0.4);
+  }
+  100% {
+    transform: scale(1, 0.8);
+  }
+}
+@keyframes barUp5 {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.2);
+  }
+  90% {
+    transform: scale(1, 0.2);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }

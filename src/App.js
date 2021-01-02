@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
+import { createBrowserHistory } from "history";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +12,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import ScrollToTop from "./components/ScrollToTop";
-import Navbar from "./components/navbar";
 import Home from "./components/home";
 import Work from "./components/work";
 import Services from "./components/services";
@@ -18,6 +19,7 @@ import About from "./components/about";
 import Blog from "./components/blog";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import Privacy from "./components/privacy";
 
 
 AOS.init();
@@ -44,10 +46,19 @@ const query = `
   }
 }
 `
+const history = createBrowserHistory();
+ReactGA.initialize("G-NKJNP76D46");
+
+history.listen(location => {
+  ReactGA.set({ page: location.pathname });
+  console.log(location.pathname);
+  //ReactGA.pageview(location.pathname);
+})
 
 function App() {
 
   const [work, setWork] = useState(null);
+
 
   useEffect(() => {
     window
@@ -74,12 +85,22 @@ function App() {
   }, []);
 
   if (!work) {
-    return "Loading all the good stuff..."
+    return (
+      <div className="loading">
+        <div className="loader">
+          <div className="loader__bar"></div>
+          <div className="loader__bar"></div>
+          <div className="loader__bar"></div>
+          <div className="loader__bar"></div>
+          <div className="loader__bar"></div>
+          <div className="loader__ball"></div>
+        </div>
+      </div>
+    )
   }
 
   return (
-    <Router>
-      <Navbar />
+    <Router history={history}>
       <ScrollToTop>
       <Switch>
         <Route exact path="/">
@@ -99,6 +120,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/privacy">
+          <Privacy />
         </Route>
       </Switch>
 
