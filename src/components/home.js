@@ -16,16 +16,16 @@ const Home = (props) => {
                     </p>
                     <div id="heroButtons">
                         <Link to="/contact">
-                            <div id="touch" className="heroButton"><em>Get in touch</em></div>
+                            <div id="touch" className="heroButton"><em>Get In Touch</em></div>
                         </Link>
                         <ScrollLink to="homeProcessSection" smooth={true}>
-                         <div id="process" className="heroButton"><em>See my process</em></div>
+                         <div id="process" className="heroButton"><em>See My Process</em></div>
                         </ScrollLink>
                     </div>
                 </div>
                 <div id="heroBrief" data-aos="fade-left">
                     <div id="leftBrief">
-                        <h3>Freelance web designer</h3>
+                        <h3>Freelance Web Designer</h3>
                         <p>My name is Tristan, I'm a Computer Science student and freelance developer
                             helping clients from many different areas to improve their online presence,
                             innovate solutions and build fast & efficient web apps tailored to each case
@@ -45,7 +45,7 @@ const Home = (props) => {
             </section>
             <section id="homeWorkSection" data-aos="fade-down">
                 <div className="container">
-                    <h2>Recent work</h2>
+                    <h2>Recent Work</h2>
                     <div className="strike"></div>
                     <div id="homeWorkExamples" className="row">
                         {props.examples.map((example, index) => {
@@ -77,7 +77,7 @@ const Home = (props) => {
                             take you a step ahead of everyone else.
                         </p>
                         <Link to="/about">
-                            <div id="homeAboutButton">Discover more about me</div>
+                            <div id="homeAboutButton">Discover More About Me</div>
                         </Link>
                     </div>
                 </div>

@@ -6,12 +6,12 @@ export default function About() {
         <div id="aboutPage">
             <div className="NavCover" data-aos="fade-left">
                 <div className="container">
-                    <h1 id="aboutHeading">Be yourself, everyone else is already taken<strong>.</strong></h1>
+                    <h1 id="aboutHeading">Be Yourself, Everyone Else Is Already Taken<strong>.</strong></h1>
                     <p></p>
                 </div>
             </div>
             <div className="container center" id="aboutContent">
-                <h3>Saying the most with the least</h3>
+                <h3>Saying The Most With The Least</h3>
                 <p>My name is Tristan, I am a computer science student and web designer/
                     developer helping to give back by providing clients in the Oxford
                     area with fantastic websites. As a mostly quiet individual I
@@ -36,7 +36,7 @@ export default function About() {
             <div className="row" id="aboutBlocks">
                 <div className="col m12 l6 aboutBlock" id="aboutBlock1">
                     <div className="container">
-                        <h2>Why work with Me?</h2>
+                        <h2>Why Work With Me?</h2>
                         <p>Designing and developing good websites has been one of
                             my greatest enjoyments. The challenge of creating something
                             spectacular, learning something new and empowering others
@@ -51,16 +51,18 @@ export default function About() {
                 </div>
                 <div className="col m12 l6 aboutBlock" id="aboutBlock2">
                     <div className="container">
-                        <h2>My passion</h2>
+                        <h2>My Passion</h2>
                         <p>Technology and everything remotely related has been my
                             passion since an early age. I have always found a
                             great satisfication in learning how different
                             technologies work and how it has come to shape the modern
-                            world.
+                            world and continues to do so day in and day out.
                             <br />
                             <br />
                             Freelancing has been my little piece of the pie and
-                            is one I hope to continue to grow well into the future.
+                            is one I hope to continue to grow well into the future. I'd
+                            love for you to join me on this and I'm sure together we can
+                            create something great and learn a little (or a lot) on the way.
                         </p>
                     </div>
                 </div>

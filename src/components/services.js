@@ -52,10 +52,6 @@ export default function Services() {
         });
     }, []);
 
-    if (!services) {
-        return <div>Loading...</div>
-    }
-
     return (
         <div id="servicesPage">
             <Switch>
@@ -66,7 +62,7 @@ export default function Services() {
                 <Route path={match.path}>
                     <div className="NavCover" data-aos="fade-left">
                         <div className="container">
-                            <h1 id="servicesHeading">Good Design is good business</h1>
+                            <h1 id="servicesHeading">Good Design Is Good Business</h1>
                             <p>Discover the various services I offer</p>
                         </div>
                     </div>
@@ -74,18 +70,30 @@ export default function Services() {
                         <h2 id="servicesTitle">Services</h2>
                             <div className="strike"></div>
                             <div className="row center">
-                            {services.sort().map(service => {
-                                return (
-                                    <div className="serviceItem col s12 m6 l4" key={service.name}>
-                                        <img className="" src={service.thumbnail.url} alt="thumbnail"/>
-                                        <h5 className="serviceItemName">{service.name}</h5>
-                                        <p className="serviceItemDescription">{service.shortDescription}</p>
-                                        <Link to={match.url + "/" + service.id}>
-                                            <div className="serviceItemButton">Explore</div>
-                                        </Link>
+                                {services ? 
+                                    services.sort().map(service => {
+                                        return (
+                                            <div className="serviceItem col s12 m6 l4" key={service.name}>
+                                                <img className="" src={service.thumbnail.url} alt="thumbnail"/>
+                                                <h5 className="serviceItemName">{service.name}</h5>
+                                                <p className="serviceItemDescription">{service.shortDescription}</p>
+                                                <Link to={match.url + "/" + service.id}>
+                                                    <div className="serviceItemButton">Explore</div>
+                                                </Link>
+                                            </div>
+                                        )
+                                    }) :
+                                    <div className="loadingWithin">
+                                        <div className="loader">
+                                            <div className="loader__bar"></div>
+                                            <div className="loader__bar"></div>
+                                            <div className="loader__bar"></div>
+                                            <div className="loader__bar"></div>
+                                            <div className="loader__bar"></div>
+                                            <div className="loader__ball"></div>
+                                        </div>
                                     </div>
-                                )
-                            })}
+                                }
                         </div>
                     </div>
                     <RecentBanner />

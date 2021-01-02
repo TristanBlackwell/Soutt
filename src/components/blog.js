@@ -46,10 +46,6 @@ export default function Blog() {
         });
     })
 
-    if (!blogPosts) {
-        return <div>Loading...</div>
-    }
-
     return (
         <Switch>
             <Route path={match.path + "/:blogId"}>
@@ -66,7 +62,7 @@ export default function Blog() {
                 <div id="blogPosts">
                     <div className="container">
                         <div className="row">
-                            {blogPosts.map(post => {
+                            {blogPosts ? blogPosts.map(post => {
                                 return (
                                     <div className="blogItem col s12 m6 l4" key={post.title}>
                                         <Link to={match.url + "/" + post.id}>
@@ -75,7 +71,18 @@ export default function Blog() {
                                         </Link>
                                     </div> 
                                 )
-                            })}
+                            }) :
+                            <div className="loadingWithin">
+                                <div className="loader">
+                                    <div className="loader__bar"></div>
+                                    <div className="loader__bar"></div>
+                                    <div className="loader__bar"></div>
+                                    <div className="loader__bar"></div>
+                                    <div className="loader__bar"></div>
+                                    <div className="loader__ball"></div>
+                                </div>
+                            </div> 
+                            }
                         </div>
                     </div>
                 </div>
