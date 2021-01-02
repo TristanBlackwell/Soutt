@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
 
+import Navbar from "./navbar";
 import Post from "./post";
 
 const query = `
@@ -53,6 +54,7 @@ export default function Blog() {
             </Route>
             <Route path={match.path}>
             <div id="blogPage">
+                <Navbar />
                 <div className="NavCover">
                     <div className="container">
                         <h1>In the mind of a dev</h1>

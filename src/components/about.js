@@ -1,9 +1,11 @@
+import Navbar from "./navbar";
 import RecentBanner from "./recentBanner";
 
 export default function About() {
 
     return (
         <div id="aboutPage">
+            <Navbar />
             <div className="NavCover" data-aos="fade-left">
                 <div className="container">
                     <h1 id="aboutHeading">Be Yourself, Everyone Else Is Already Taken<strong>.</strong></h1>

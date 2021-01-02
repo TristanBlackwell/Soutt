@@ -1,5 +1,6 @@
 import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
 
+import Navbar from "./navbar";
 import Project from "./project";
 import RecentBanner from "./recentBanner";
 
@@ -9,6 +10,7 @@ const Work = props => {
 
     return (
         <div id="workPage">
+            <Navbar />
             <div className="NavCover" >
                 <div className="container">
                     <h1>Work</h1>

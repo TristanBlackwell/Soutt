@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
 
+import Navbar from "./navbar";
 import Service from "./service";
 import RecentBanner from "./recentBanner";
 
@@ -54,6 +55,7 @@ export default function Services() {
 
     return (
         <div id="servicesPage">
+            <Navbar />
             <Switch>
                 <Route path={match.path + "/:serviceId"}>
                     <Service services={services} />
@@ -73,7 +75,7 @@ export default function Services() {
                                 {services ? 
                                     services.sort().map(service => {
                                         return (
-                                            <div className="serviceItem col s12 m6 l4" key={service.name}>
+                                            <div className="serviceItem col s12 m12 l4" key={service.name}>
                                                 <img className="" src={service.thumbnail.url} alt="thumbnail"/>
                                                 <h5 className="serviceItemName">{service.name}</h5>
                                                 <p className="serviceItemDescription">{service.shortDescription}</p>

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Select from 'react-select';
 
+import Navbar from "./navbar";
+
 const options = [
     { value: 'Web Design', label: 'Web Design' },
     { value: 'Web Development', label: 'Web Development' },
@@ -35,6 +37,7 @@ export default function Contact() {
 
     return (
         <div id="contactPage">
+            <Navbar />
             <div className="NavCover" data-aos="fade-left">
                 <div className="container">
                     <h1>Let's Have A Chat</h1>

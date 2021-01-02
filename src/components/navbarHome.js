@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
 
-import logo from "../images/souttPurpleLogo";
+import logo from "../images/souttOrangeLogo";
 
 export default function Navbar() {
 
@@ -25,11 +25,9 @@ export default function Navbar() {
     }
 
     return (
-        <div className={classnames("navbar", {"navbar--hidden": !visible})}>
+        <div className={classnames("navbarHome", {"navbar--hidden": !visible})}>
             <div className="logo">
-                <Link to="/">
-                    <img src={logo} alt="logo" className="navLogo"/>
-                </Link>
+                <img src={logo} alt="logo" className="navLogo"/>
             </div>
             <div className="navigation">
                 <Link to="/" className="active middle">Home</Link>

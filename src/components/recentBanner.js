@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
+
+import Post from "./post";
 
 const query = `
 {
@@ -15,6 +17,8 @@ const query = `
 `
 
 export default function RecentBanner() {
+
+    let match = useRouteMatch();
 
     const [recents, setRecents] = useState(null);
 
@@ -34,13 +38,13 @@ export default function RecentBanner() {
             console.error(errors);
             }
 
-            let sorted = data.blogPostCollection.items.slice(0, 3).sort(function(a, b) {
+            let sorted = data.blogPostCollection.items.sort(function(a, b) {
                 return b.id - a.id;
             })
 
             setRecents(sorted);
         });
-    })
+    }, )
 
     if (!recents) {
       return (
@@ -49,12 +53,17 @@ export default function RecentBanner() {
     }
 
     return (
-          <div className="recentBanner">
+      <Switch>
+        <Route path={"/blog/:blogId"}>
+          <Post blogPosts={recents} />
+        </Route>
+        <Route path={match.path}>
+        <div className="recentBanner">
             <div className="container">
               <h3>Recent Posts</h3>
               <div className="strike"></div>
               <div className="row">
-                {recents.map(post => {
+                {recents.slice(0, 3).map(post => {
                     return (
                       <div className="col s12 m6 l4 recentPost" key={post.title}>
                         <Link to={"/blog/" + post.id}>
@@ -67,5 +76,7 @@ export default function RecentBanner() {
               </div>
             </div>
           </div>
+        </Route>
+      </Switch>
     )
 }

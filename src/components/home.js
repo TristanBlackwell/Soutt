@@ -2,12 +2,14 @@ import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import plans from "../images/plans.jpg";
 
+import Navbar from "./navbarHome";
 import RecentBanner from "./recentBanner";
 
 const Home = (props) => {
 
     return (
         <div id="homePage">
+            <Navbar />
             <section id="heroSection">
                 <div id="heroContent">
                     <h1>Bespoke freelance web<br /> design and development</h1>
