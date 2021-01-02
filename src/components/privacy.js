@@ -1,9 +1,10 @@
-
+import Navbar from "./navbar";
 
 export default function Privacy() {
 
     return (
         <div id="privacyPage">
+            <Navbar />
             <div className="NavCover">
                 <div className="container">
                     <h1>Privacy made clear</h1>

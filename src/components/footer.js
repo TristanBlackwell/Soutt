@@ -54,18 +54,18 @@ export default function Footer() {
                             Contact
                         </h5>
                         <a href="mailto:tristan@soutt.co.uk">
-                            <p>Info@developer.com</p>
+                            <p>tristan@soutt.co.uk</p>
                         </a>
                         <a href="tel:07851934397">
-                            <p>07567 375491</p>
+                            <p>07851 934397</p>
                         </a>
                     </div>
                 </div>
                 </div>
             <div className="footer-copyright">
                 <div className="container">
-                © 2020 Copyright Soutt
-                <a className="grey-text text-lighten-4 right" href="#!">N/A</a>
+                © Soutt 2020. All Rights Reserved.
+                <Link className="grey-text text-lighten-4 right" to="/privacy">Privacy Policy</Link>
                 </div>
             </div>
             </footer>

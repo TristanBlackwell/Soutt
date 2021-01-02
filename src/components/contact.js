@@ -62,6 +62,7 @@ export default function Contact() {
                             <br />
                             <span>or on</span>
                             <input className="contactInput" id="contactPhone" name="phone" type="text" placeholder="Phone number"/>
+                            <span>.</span>
                             <br />
                             <span>Anything else to mention?</span>
                             <br />
