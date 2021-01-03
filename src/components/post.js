@@ -21,7 +21,7 @@ const Post = props => {
 
             setSortedPosts(sorted);
         }
-    })
+    }, [props.blogPosts])
 
     if (sortedPosts) { return (
         <div className="blogPost">

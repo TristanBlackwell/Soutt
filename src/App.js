@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useHistory
 } from "react-router-dom";
 import './App.css';
 import "animate.css";
@@ -46,19 +47,27 @@ const query = `
   }
 }
 `
-const history = createBrowserHistory();
-ReactGA.initialize("G-NKJNP76D46");
 
-history.listen(location => {
-  ReactGA.set({ page: location.pathname });
-  console.log(location.pathname);
-  //ReactGA.pageview(location.pathname);
-})
+const history = createBrowserHistory();
+ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
 
 function App() {
 
-  const [work, setWork] = useState(null);
+  return (
+    <Router history={history}>
+      <ScrollToTop>
+        <Routes />
+        <Footer />
+      </ScrollToTop>
+    </Router>
+  );
+}
 
+function Routes() {
+
+  const history = useHistory();
+
+  const [work, setWork] = useState(null);
 
   useEffect(() => {
     window
@@ -82,7 +91,15 @@ function App() {
 
         setWork(sorted);
       });
-  }, []);
+
+    trackPageView();
+    history.listen(trackPageView);
+  }, [history])
+
+  function trackPageView() {
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  }
 
   if (!work) {
     return (
@@ -100,9 +117,7 @@ function App() {
   }
 
   return (
-    <Router history={history}>
-      <ScrollToTop>
-      <Switch>
+    <Switch>
         <Route exact path="/">
           <Home examples={work}/>
         </Route>
@@ -125,11 +140,7 @@ function App() {
           <Privacy />
         </Route>
       </Switch>
-
-    <Footer />
-    </ScrollToTop>
-    </Router>
-  );
+  )
 }
 
 export default App;
