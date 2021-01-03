@@ -1,8 +1,19 @@
+@font-face {
+  font-family: Cooper Hewitt;
+  src: url("./fonts/CooperHewitt-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Cooper Hewitt;
+  font-weight: italic;
+  src: url("./fonts/CooperHewitt-BookItalic.otf") format("opentype");
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Work Sans", sans-serif;
+  font-family: Cooper Hewitt, sans-serif;
   font-weight: 600;
   overflow-x: hidden;
 }
@@ -36,15 +47,13 @@ body {
   top: -10vh;
 }
 
-.navLogo {
-}
-
 .navigation a {
   position: relative;
   margin: 0 1.5em;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: "Montserrat";
   font-weight: 800;
   letter-spacing: 1.5px;
 }
@@ -112,7 +121,8 @@ body {
 
 #heroContent h1 {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
 }
 
 @keyframes enlargeText {
@@ -185,7 +195,8 @@ body {
 }
 
 #leftBrief h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   letter-spacing: 1.5px;
 }
 
@@ -204,7 +215,8 @@ body {
 }
 
 #rightBrief h5 {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   letter-spacing: 1.5px;
 }
 
@@ -232,7 +244,8 @@ body {
 }
 
 #homeWorkSection h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
 }
 
@@ -261,7 +274,8 @@ body {
 .exampleName,
 .workName {
   margin-bottom: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
 }
 
@@ -309,7 +323,8 @@ body {
 }
 
 #contentText h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
 }
 
@@ -344,7 +359,8 @@ body {
 #homeProcessSection .container h2 {
   width: 60%;
   color: #361b5f;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 
 #processList {
@@ -431,7 +447,8 @@ body {
 #ContactTitle {
   width: 60%;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: white;
 }
 
@@ -441,8 +458,9 @@ body {
 
 #ContactInfo h4 {
   margin: 0;
-  font-family: "Lato";
+  font-family: "Oswald";
   letter-spacing: 1px;
+  font-weight: 800;
 }
 
 #ContactInfo p {
@@ -475,7 +493,8 @@ body {
 .NavCover .container h1 {
   margin-top: 0;
   padding-top: 2em;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
 }
 
 .NavCover .container p {
@@ -503,13 +522,15 @@ body {
 
 .projectName {
   color: #361b5f;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
 }
 
 .projectSubheading {
   margin-top: 3em;
   color: #361b5f;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
 }
 
 .projectDescription {
@@ -570,7 +591,8 @@ body {
 }
 
 #servicesTitle {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
   animation: fadeInLeft 1s;
 }
@@ -586,7 +608,8 @@ body {
 }
 
 .serviceItemName {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
 }
 
@@ -627,7 +650,8 @@ body {
 }
 
 .serviceSubHeading {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
 }
 
@@ -652,7 +676,8 @@ strong {
 
 #aboutContent h3 {
   margin: 1em 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
   transition: all 0.3s ease-in-out;
 }
@@ -689,7 +714,8 @@ strong {
 
 #contactArea {
   margin: 5em 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
 }
 
 #contactArea .container h4 {
@@ -808,6 +834,7 @@ strong {
 
 .blogItemName {
   font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
 }
 
@@ -822,7 +849,8 @@ strong {
 }
 
 .blogContent h4 {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
 }
 
@@ -861,7 +889,8 @@ strong {
 }
 
 .recentBanner .container h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   color: #361b5f;
 }
 
@@ -875,7 +904,8 @@ strong {
 
 .recentTitle {
   color: #361b5f;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
 }
 
 .recentDescription {
@@ -893,7 +923,8 @@ footer {
 }
 
 .footerTitle {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
   letter-spacing: 1px;
 }
 
@@ -918,7 +949,8 @@ footer {
 
 #privacyPolicy .container h4 {
   color: #361b5f;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
 }
 
 #privacyPolicy .container p {
