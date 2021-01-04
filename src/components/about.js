@@ -24,7 +24,7 @@ export default function About() {
             <div className="container center" id="aboutContent">
                 <h3>Saying The Most With The Least</h3>
                 <p>My name is Tristan, I am a computer science student and web designer/
-                    developer helping to give back by providing clients in the Oxford
+                    developer helping to give back by providing clients in Oxford and the surrounding
                     area with fantastic websites. As a mostly quiet individual I
                     believe my designs follow suit, saying a lot with a little. Keeping
                     true to my minimalist style.
@@ -37,6 +37,14 @@ export default function About() {
                     the best I can and hope to build long term relations that allow for
                     the strongest synergy.
                     <br/>
+                    <br />
+                    By taking the time to gather requirements, I have the confidence going
+                    forward that the services I provide create signififcant value for my 
+                    clients and serve their intended purpose. Building upon this, I develop
+                    a strong integrity with whoever I may be working with secure an ongoing
+                    relationship in projects going forward. The best results come from
+                    compounding and relations are no different.
+                    <br/>
                     <br/>
                     When I'm not in front of a screen designing and constructing epic
                     sites or studying <em>hard</em> for exams I usually try to balance
@@ -48,14 +56,14 @@ export default function About() {
                 <div className="col m12 l6 aboutBlock" id="aboutBlock1">
                     <div className="container">
                         <h2>Why Work With Me?</h2>
-                        <p>Designing and developing good websites has been one of
+                        <p>Designing and developing marvelous websites has been one of
                             my greatest enjoyments. The challenge of creating something
                             spectacular, learning something new and empowering others
                             is what gives me the drive to do what I do.
                             <br />
                             <br />
                             The never-ending journey to perfection is the path I follow,
-                            and although I know that the destination can not be reached
+                            and although I know that the destination is impossible to reach,
                             just following the route is fine by me.
                         </p>
                     </div>
@@ -72,7 +80,7 @@ export default function About() {
                             <br />
                             Freelancing has been my little piece of the pie and
                             is one I hope to continue to grow well into the future. I'd
-                            love for you to join me on this and I'm sure together we can
+                            love for you to join me on this journey and I'm sure together we can
                             create something great and learn a little (or a lot) on the way.
                         </p>
                     </div>

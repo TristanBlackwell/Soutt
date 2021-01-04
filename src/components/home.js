@@ -38,7 +38,7 @@ const Home = (props) => {
                     <div id="leftBrief">
                         <h3>Freelance Web Designer</h3>
                         <p>My name is Tristan, I'm a Computer Science student and freelance developer
-                            helping clients from many different areas to improve their online presence,
+                            helping clients improve their online presence,
                             innovate solutions and build fast & efficient web apps tailored to each case
                             to go further online.
                             <br />
@@ -104,15 +104,15 @@ const Home = (props) => {
                                 possible about you and/or your business. Taking the time
                                 on this stage helps create the game plan going forward to
                                 solve the problems and construct the ideas you have brought forward
-                                and gives us both clarity and confidence we are heading towards achievement.
+                                and gives us both clarity and confidence we are heading towards success.
                             </p>
                         </li>
                         <li className="process">
                             <p>Templating & Prototyping</p>
-                            <p className="processDescription">This is the iterative stage of designing the look
-                                and feel that will be present across the site and should
-                                align perfectly with your business image and ethos to extend your online
-                                presence further and allow users to intuitively interact with your business.
+                            <p className="processDescription">This is the iterative stage, designing the look
+                                and feel that will be present across the site to
+                                align perfectly with your business image and ethos, Allowing you to extend your online
+                                presence further and interact better with your audience.
                             </p>
                         </li>
                         <li className="process">
@@ -121,7 +121,8 @@ const Home = (props) => {
                                 work from the earlier stages will come to fruition as I build
                                 the site to the highest level of quality, performance and security.
                                 Implemented alongside this is any additional scope we may have
-                                discussed such as a CMS should you wish to edit your own content.
+                                discussed such as a CMS should you wish to edit your own content and improve
+                                your workflow & efficiency.
                             </p>
                         </li>
                         <li className="process">
