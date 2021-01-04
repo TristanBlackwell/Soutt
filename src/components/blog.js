@@ -24,6 +24,8 @@ export default function Blog() {
     const [blogPosts, setBlogPosts] = useState(null);
 
     useEffect(() => {
+
+        let isMounted = true;
         window
         .fetch("https://graphql.contentful.com/content/v1/spaces/" + process.env.REACT_APP_SPACEID + "/", {
             method: "POST",
@@ -43,8 +45,16 @@ export default function Blog() {
                 return b.id - a.id
             })
 
-            setBlogPosts(sorted);
+            if (isMounted) setBlogPosts(sorted);
         });
+
+        if (window.loc !== window.location.pathname) {
+            window.gtag("config", process.env.REACT_APP_TRACKING_ID, {
+                page_title: window.location.pathname.slice(1, window.location.pathname.length)
+            })
+        }
+
+        return () => { isMounted = false};
     })
 
     return (

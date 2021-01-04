@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
 
 import Navbar from "./navbar";
@@ -5,6 +6,14 @@ import Project from "./project";
 import RecentBanner from "./recentBanner";
 
 const Work = props => {
+
+    useEffect(() => {
+        if (window.loc !== window.location.pathname) {
+            window.gtag("config", process.env.REACT_APP_TRACKING_ID, {
+                page_title: window.location.pathname.slice(1, window.location.pathname.length)
+            })
+        }
+    })
 
     let match = useRouteMatch();
 

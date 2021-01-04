@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import Navbar from "./navbar";
 import RecentBanner from "./recentBanner";
 
 export default function About() {
+
+    useEffect(() => {
+        if (window.loc !== window.location.pathname) {
+            window.gtag("config", process.env.REACT_APP_TRACKING_ID, {
+                page_title: window.location.pathname.slice(1, window.location.pathname.length)
+            })
+        }
+    })
 
     return (
         <div id="aboutPage">

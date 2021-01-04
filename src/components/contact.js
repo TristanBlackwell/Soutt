@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Select from 'react-select';
 
 import Navbar from "./navbar";
@@ -14,6 +14,15 @@ const options = [
 export default function Contact() {
 
     const [status, setStatus] = useState("");
+
+    useEffect(() => {
+        if (window.loc !== window.location.pathname) {
+            window.gtag("config", process.env.REACT_APP_TRACKING_ID, {
+                page_title: window.location.pathname.slice(1, window.location.pathname.length)
+            })
+        }
+    })
+
 
     function submitForm(e) {
         e.preventDefault();
@@ -66,7 +75,7 @@ export default function Contact() {
                             <br />
                             <span>Anything else to mention?</span>
                             <br />
-                            <textArea className="contactInput" id="contactText" name="message" value="project info, timelines etc"/> 
+                            <textarea className="contactInput" id="contactText" name="message" placeholder="project info, timelines etc"/> 
                             <br />
                             {status === "SUCCESS" ? <p className="formMsg">Thank you!</p> :
                             <button type="submit" id="contactSubmit">Send Enquiry</button> }

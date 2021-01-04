@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import plans from "../images/plans.jpg";
@@ -6,6 +7,14 @@ import Navbar from "./navbarHome";
 import RecentBanner from "./recentBanner";
 
 const Home = (props) => {
+
+    useEffect(() => {
+        if (window.loc !== window.location.pathname) {
+            window.gtag("config", process.env.REACT_APP_TRACKING_ID, {
+                page_title: window.location.pathname.slice(1, window.location.pathname.length)
+            })
+        }
+    })
 
     return (
         <div id="homePage">
