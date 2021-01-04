@@ -21,10 +21,12 @@ export default function RecentBanner() {
     let match = useRouteMatch();
 
     const [recents, setRecents] = useState(null);
+    const [retrieved, setRetrieved] = useState(false);
 
     useEffect(() => {
 
       let isMounted = true;
+      if (!retrieved) {
         window
         .fetch("https://graphql.contentful.com/content/v1/spaces/" + process.env.REACT_APP_SPACEID + "/", {
             method: "POST",
@@ -45,10 +47,12 @@ export default function RecentBanner() {
             })
 
             if (isMounted) setRecents(sorted);
+            setRetrieved(true);
         });
+      }
 
-        return () => { isMounted = false};
-    }, )
+      return () => { isMounted = false};
+    }, [recents, retrieved])
 
     if (!recents) {
       return (

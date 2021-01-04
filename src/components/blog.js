@@ -22,11 +22,13 @@ export default function Blog() {
     let match = useRouteMatch();
 
     const [blogPosts, setBlogPosts] = useState(null);
+    const [retrieved, setRetrieved] = useState(false);
 
     useEffect(() => {
 
         let isMounted = true;
-        window
+        if (!retrieved) {
+            window
         .fetch("https://graphql.contentful.com/content/v1/spaces/" + process.env.REACT_APP_SPACEID + "/", {
             method: "POST",
             headers: {
@@ -46,7 +48,9 @@ export default function Blog() {
             })
 
             if (isMounted) setBlogPosts(sorted);
+            setRetrieved(true);
         });
+        }
 
         if (window.loc !== window.location.pathname) {
             window.gtag("config", process.env.REACT_APP_TRACKING_ID, {
@@ -55,7 +59,7 @@ export default function Blog() {
         }
 
         return () => { isMounted = false};
-    })
+    }, [blogPosts, retrieved])
 
     return (
         <Switch>
