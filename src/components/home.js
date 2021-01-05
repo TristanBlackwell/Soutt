@@ -6,6 +6,9 @@ import plans from "../images/plans.jpg";
 import Navbar from "./navbarHome";
 import RecentBanner from "./recentBanner";
 
+import flawlessQuote from "../images/flawlessQuoteImg";
+import bodyevoQuote from "../images/bodyevoQuoteImg";
+
 const Home = (props) => {
 
     useEffect(() => {
@@ -72,6 +75,14 @@ const Home = (props) => {
                                 </div>
                             )
                         })}
+                    </div>
+                    <div className="row" id="reviewSection">
+                        <div className="col s12 m12 l6 reviewContainer">
+                            <img src={flawlessQuote} alt="flawless finish client quote"/>
+                        </div>
+                        <div className="col s12 m12 l6 reviewContainer">
+                            <img src={bodyevoQuote} alt="body evo client quote"/>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -297,6 +297,10 @@ body {
   text-decoration: underline;
 }
 
+.reviewContainer {
+  width: 90%;
+}
+
 #homeAbout {
   padding-bottom: 15vh;
 }
@@ -985,6 +989,10 @@ footer {
     margin-bottom: 10vh;
   }
 
+  .reviewContainer {
+    margin: 3vh 0;
+  }
+
   #homeAbout {
     padding-bottom: 30vh;
   }
@@ -1052,6 +1060,12 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    width: 80vw;
+  }
+
   #heroContent {
     margin-top: 10vh;
   }
@@ -1069,6 +1083,11 @@ footer {
     margin-left: 0;
   }
 
+  .workExample {
+    width: 80%;
+    margin: auto;
+  }
+
   #servicesPage .NavCover {
     height: 60vh;
   }
@@ -1084,12 +1103,6 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
-  .navigation {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-    width: 80vw;
-  }
-
   #aboutPage .NavCover {
     height: 65vh;
   }
