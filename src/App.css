@@ -240,7 +240,6 @@ body {
   background-color: #f5f5f5;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  margin-bottom: 10vh;
 }
 
 #homeWorkSection h2 {
@@ -297,8 +296,10 @@ body {
   text-decoration: underline;
 }
 
-.reviewContainer {
-  width: 90%;
+#reviewSection {
+  background-color: #361b5f;
+  padding: 5vh 0;
+  margin-bottom: 10vh;
 }
 
 #homeAbout {
