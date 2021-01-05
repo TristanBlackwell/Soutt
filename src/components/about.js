@@ -23,7 +23,7 @@ export default function About() {
             </div>
             <div className="container center" id="aboutContent">
                 <h3>Saying The Most With The Least</h3>
-                <p>My name is Tristan, I am a computer science student and web designer/
+                <p>My name is Tristan, I am a web designer/
                     developer helping to give back by providing clients in Oxford and the surrounding
                     area with fantastic websites. As a mostly quiet individual I
                     believe my designs follow suit, saying a lot with a little. Keeping
@@ -47,9 +47,9 @@ export default function About() {
                     <br/>
                     <br/>
                     When I'm not in front of a screen designing and constructing epic
-                    sites or studying <em>hard</em> for exams I usually try to balance
-                    out my life with other hobbies such as visiting the gym or riding
-                    the motorcycle.
+                    sites, I usually balance out my time in front of the screen
+                    with other hobbies such as visiting the gym or riding
+                    my motorcycle.
                 </p>
             </div>
             <div className="row" id="aboutBlocks">

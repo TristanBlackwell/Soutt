@@ -25,7 +25,7 @@ const Home = (props) => {
             <section id="heroSection">
                 <div id="heroContent">
                     <h1>Bespoke freelance web<br /> design and development</h1>
-                    <p><em>I'm Tristan, an Oxford based web designer helping individuals &
+                    <p><em>I'm Tristan, an Oxford based web designer/developer helping individuals &
                         businesses solve their problems with creative, forward thinking.</em>
                     </p>
                     <div id="heroButtons">
@@ -40,9 +40,9 @@ const Home = (props) => {
                 <div id="heroBrief" data-aos="fade-left">
                     <div id="leftBrief">
                         <h3>Freelance Web Designer</h3>
-                        <p>My name is Tristan, I'm a Computer Science student and freelance developer
-                            helping clients improve their online presence,
-                            innovate solutions and build fast & efficient web apps tailored to each case
+                        <p>My name is Tristan, I'm a freelance developer
+                            assisting clients to improve their online presence,
+                            innovate solutions and build fast & efficient web apps designed for each case
                             to go further online.
                             <br />
                             View some of the <Link to="/work">work</Link> I have done.
@@ -53,7 +53,7 @@ const Home = (props) => {
                         <p>I am currently taking on work. Get in touch and share some ideas.</p>
                         <a href="tel:07851934397">07851 934397</a>
                         <br />
-                        <a href="mailto:tristan@soutt.co.uk">Tristan@soutt.co.uk</a>
+                        <a href="mailto:tristan@soutt.co.uk">tristan@soutt.co.uk</a>
                     </div>
                 </div>
             </section>
@@ -116,8 +116,8 @@ const Home = (props) => {
                             <p className="processDescription">The building doesn't begin until I have learnt as much as
                                 possible about you and/or your business. Taking the time
                                 on this stage helps create the game plan going forward to
-                                solve the problems and construct the ideas you have brought forward
-                                and gives us both clarity and confidence we are heading towards success.
+                                solve the problems in best methods and with the best solution.
+                                This also gives us both clarity and confidence we are heading towards success.
                             </p>
                         </li>
                         <li className="process">
@@ -126,6 +126,9 @@ const Home = (props) => {
                                 and feel that will be present across the site to
                                 align perfectly with your business image and ethos, Allowing you to extend your online
                                 presence further and interact better with your audience.
+                                <br />
+                                I don't use templates in my design so my clients can be sure that their design
+                                is unique to them and adds value.
                             </p>
                         </li>
                         <li className="process">
