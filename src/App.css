@@ -1104,6 +1104,10 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
+  #heroContent {
+    margin-top: 0;
+  }
+
   #aboutPage .NavCover {
     height: 65vh;
   }
