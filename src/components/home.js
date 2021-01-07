@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
-import plans from "../images/plans.jpg";
+import portrait from "../images/portrait.jpg";
 
 import Navbar from "./navbarHome";
 import RecentBanner from "./recentBanner";
@@ -90,7 +90,7 @@ const Home = (props) => {
             </section>
             <div id="homeAbout" className="container" data-aos="fade-left">
                 <div id="homeAboutContent">
-                    <img id="plansImg" src={plans} alt="wireframe" />
+                    <img id="portraitImg" src={portrait} alt="web developer portrait" />
                     <div id="contentText" className="row">
                         <h3>About Tristan</h3>
                         <div className="strike"></div>

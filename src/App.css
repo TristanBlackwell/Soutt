@@ -308,7 +308,7 @@ body {
 
 #homeAboutContent {
   position: relative;
-  margin-left: 5vw;
+  margin-left: 15vw;
 }
 
 #homeAboutContent img {
@@ -316,15 +316,15 @@ body {
   z-index: -1;
 }
 
-#plansImg {
-  width: 45vw;
-  height: 45vh;
+#portraitImg {
+  width: 20vw;
+  height: 50vh;
 }
 
 #contentText {
   position: absolute;
-  top: 25%;
-  left: 40%;
+  top: 10%;
+  left: 30%;
   width: 50%;
 }
 
@@ -998,6 +998,10 @@ footer {
     padding-bottom: 30vh;
   }
 
+  #portraitImg {
+    width: 40vw;
+  }
+
   #aboutPage .NavCover {
     height: 50vh;
   }
@@ -1047,6 +1051,11 @@ footer {
     margin-top: -12vh;
   }
 
+  #contentText {
+    top: 20%;
+    left: 50%;
+  }
+
   #blogPage .NavCover {
     height: 40vh;
   }
@@ -1089,6 +1098,14 @@ footer {
     margin: auto;
   }
 
+  #portraitImg {
+    width: 45vw;
+  }
+
+  #contentText {
+    left: 35%;
+  }
+
   #servicesPage .NavCover {
     height: 60vh;
   }
@@ -1108,6 +1125,10 @@ footer {
     margin-top: 0;
   }
 
+  #contentText {
+    left: 45%;
+  }
+
   #aboutPage .NavCover {
     height: 65vh;
   }
@@ -1124,6 +1145,10 @@ footer {
 @media only screen and (max-width: 450px) {
   #heroSection {
     height: 200vh;
+  }
+
+  #portraitImg {
+    width: 55vw;
   }
 }
 
