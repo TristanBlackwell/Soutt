@@ -51,7 +51,7 @@ const Home = (props) => {
                     <div id="rightBrief">
                         <h5>Have an idea that needs executing?</h5>
                         <p>I am currently taking on work. Get in touch and share some ideas.</p>
-                        <a href="tel:07851934397">07851 934397</a>
+                        <a href="tel:07851934397" style={{display: "none"}}>07851 934397</a>
                         <br />
                         <a href="mailto:tristan@soutt.co.uk">tristan@soutt.co.uk</a>
                     </div>

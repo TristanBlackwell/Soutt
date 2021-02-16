@@ -57,7 +57,7 @@ export default function Contact() {
             </div>
             <div id="contactArea" data-aos="zoom-out">
                 <div className="container center">
-                <h4>Time Sensitive? Send Me An <a href="#email">Email</a> Or Give Me A <a href="#phone">Ring</a> Instead</h4>
+                <h4>Time Sensitive? Send Me An <a href="mailto:tristan@soutt.co.uk">Email</a> Instead</h4>
                 <h5>or...</h5>
                     <form id="contactForm" onSubmit={submitForm} action="https://formspree.io/f/xqkggolo" method="POST">
                         <div>

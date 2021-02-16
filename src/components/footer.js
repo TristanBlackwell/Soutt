@@ -56,7 +56,7 @@ export default function Footer() {
                         <a href="mailto:tristan@soutt.co.uk">
                             <p>tristan@soutt.co.uk</p>
                         </a>
-                        <a href="tel:07851934397">
+                        <a href="tel:07851934397" style={{display: "none"}}>
                             <p>07851 934397</p>
                         </a>
                     </div>

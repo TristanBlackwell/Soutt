@@ -38,7 +38,7 @@ export default function Navbar() {
                 <Link to="/contact" className="middle">Contact</Link>
             </div>
             <div className="contact">
-                <a href="tel: 07851934397">
+                <a href="tel: 07851934397" style={{display: "none"}}>
                     <i className="fas fa-phone-alt"></i>
                     <p>07851 934397</p>
                 </a>
